@@ -2,17 +2,17 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>http://yoursite-url/post-sitemap.xml</loc>
+        <loc>http://milkdz.cn/post-sitemap.xml</loc>
         <lastmod>2018-04-01T02:47:28.778Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite-url/page-sitemap.xml</loc>
+        <loc>http://milkdz.cn/page-sitemap.xml</loc>
         <lastmod>2018-03-31T02:41:00.797Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite-url/tag-sitemap.xml</loc>
+        <loc>http://milkdz.cn/tag-sitemap.xml</loc>
         <lastmod>2018-03-31T02:41:00.715Z</lastmod>
     </sitemap>
 
