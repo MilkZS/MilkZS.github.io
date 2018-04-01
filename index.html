@@ -136,6 +136,13 @@
 
                         
                         <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -144,13 +151,6 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -213,36 +213,82 @@
 
 <div class="post-preview">
 
-    <a href="/2017/03/18/hexo-theme-beantech/">
+    <a href="/2018/04/01/开启Android源码中GPS相关的log/">
         <h2 class="post-title">
-            [Hexo] Theme BeanTech
+            开启Android源码中GPS相关的log
         </h2>
         <h3 class="post-subtitle">
-            This is hexo theme Demo.
+            通过修改文件打开Android源码中GPSlog开关
         </h3>
         <div class="post-content-preview">
-            
-Ported Theme of Hux Blog, Thank Huxpro for designing such a flawless theme.
-This BeanTech theme created by YuHsuan modified from the original Porter Kaijun
+            打开类中的开关
+如何操作
 
 
+首先查看需要打log的手机中是否有/data/local.prop文件，如果有则使用git pull取出，如果没有则先在手机外新建一个loca.prop文件。
 
 
-Usage
+打开local.prop文件，在里边将需要打log的类的log等级调高，一般调最高。比如：
 
-I publish the whole project f......
+
+123log.tag.LocationManagerService=VERBOSE    log.tag......
         </div>
     </a>
     
         <p class="post-meta" style="margin: 10px 0;">
             Posted by MilkDZ on
-            2017-03-18
+            2018-04-01
         </p>
         <div class="tags">
             
-              <a href="/tags/#Hexo" title="Hexo">Hexo</a>
+              <a href="/tags/#Log" title="Log">Log</a>
             
-              <a href="/tags/#Blog" title="Blog">Blog</a>
+              <a href="/tags/#Android" title="Android">Android</a>
+            
+              <a href="/tags/#GPS" title="GPS">GPS</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/04/01/MakeFile中打Log/">
+        <h2 class="post-title">
+            MakeFile中打Log
+        </h2>
+        <h3 class="post-subtitle">
+            Android.mk中打log进行调试。
+        </h3>
+        <div class="post-content-preview">
+            在makefile中打印Log
+    在logcat中显示log信息,在mk文件中书写语句。
+
+$(warning xxxxx)
+
+    程序继续向下运行，不会阻塞。
+12345$(warning $(CLASS_NAME))$(warning "====specify line======")
+
+$(error xxxxx)
+
+    程序会阻塞，不再向下运行。
+12345$(erro......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by MilkDZ on
+            2018-04-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#MakeFile" title="MakeFile">MakeFile</a>
+            
+              <a href="/tags/#Log" title="Log">Log</a>
+            
+              <a href="/tags/#Android" title="Android">Android</a>
             
         </div>
     
@@ -282,11 +328,23 @@ I publish the whole project f......
     <div class="tags">
         
             
-            <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
+        
             
         
             
-            <a href="/tags/#Blog" title="Blog" rel="1">Blog</a>
+            <a href="/tags/#MakeFile" title="MakeFile" rel="1">MakeFile</a>
+            
+        
+            
+            <a href="/tags/#Log" title="Log" rel="2">Log</a>
+            
+        
+            
+            <a href="/tags/#Android" title="Android" rel="2">Android</a>
+            
+        
+            
+            <a href="/tags/#GPS" title="GPS" rel="1">GPS</a>
             
         
     </div>
@@ -304,7 +362,7 @@ I publish the whole project f......
         
 
         
-            <p>Name : 左琦</p>
+            <p>Hi,My chinese name is 左琦. English name is MilkDZ. Welcome to my blog!</p>
         
 
         <!-- SNS Link -->
@@ -341,7 +399,11 @@ I publish the whole project f......
     <ul>
       
         <li>
-          <a href="/2017/03/18/hexo-theme-beantech/">[Hexo] Theme BeanTech</a>
+          <a href="/2018/04/01/开启Android源码中GPS相关的log/">开启Android源码中GPS相关的log</a>
+        </li>
+      
+        <li>
+          <a href="/2018/04/01/MakeFile中打Log/">MakeFile中打Log</a>
         </li>
       
     </ul>
@@ -352,7 +414,7 @@ I publish the whole project f......
         
     <h5>ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">2</span></li></ul>
     </div>
 
         <hr>
