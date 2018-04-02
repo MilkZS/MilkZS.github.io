@@ -16,15 +16,22 @@
     </url>
 
     <url>
-        <loc>http://milkdz.cn/tags/Android/</loc>
+        <loc>http://milkdz.cn/tags/GPS/</loc>
         <lastmod>2018-04-01T14:32:23.192Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://milkdz.cn/tags/GPS/</loc>
-        <lastmod>2018-04-01T14:32:23.192Z</lastmod>
+        <loc>http://milkdz.cn/tags/Android/</loc>
+        <lastmod>2018-04-02T14:41:47.389Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/NFC/</loc>
+        <lastmod>2018-04-02T14:41:47.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -136,13 +136,6 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -151,6 +144,13 @@
                         
                         <li>
                             <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -200,15 +200,13 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a href="#Hexo" title="Hexo" rel="0">Hexo</a>
-                
-                    <a href="#Blog" title="Blog" rel="0">Blog</a>
-                
                     <a href="#MakeFile" title="MakeFile" rel="1">MakeFile</a>
                 
                     <a href="#Log" title="Log" rel="2">Log</a>
                 
-                    <a href="#Android" title="Android" rel="2">Android</a>
+                    <a href="#Android" title="Android" rel="3">Android</a>
+                
+                    <a href="#NFC" title="NFC" rel="1">NFC</a>
                 
                     <a href="#GPS" title="GPS" rel="1">GPS</a>
                 
@@ -216,20 +214,6 @@
 
             <!-- 标签列表 -->
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Hexo">
-                    <span class="tag-text">Hexo</span>
-                </span>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Blog">
-                    <span class="tag-text">Blog</span>
-                </span>
-                
-            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="MakeFile">
@@ -331,6 +315,25 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
+                     <a href="/2018/04/02/Skip-NDEF/">
+                        <h2 class="post-title">
+                            Skip NDEF
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                FLAG_READER_SKIP_NDEF_CHECK这个flag在Android中的作用
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
                      <a href="/2018/04/01/开启Android源码中GPS相关的log/">
                         <h2 class="post-title">
                             开启Android源码中GPS相关的log
@@ -338,6 +341,32 @@
                         
                             <h3 class="post-subtitle">
                                 通过修改文件打开Android源码中GPSlog开关
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="NFC">
+                    <span class="tag-text">NFC</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2018/04/02/Skip-NDEF/">
+                        <h2 class="post-title">
+                            Skip NDEF
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                FLAG_READER_SKIP_NDEF_CHECK这个flag在Android中的作用
                             </h3>
                         
                     </a>

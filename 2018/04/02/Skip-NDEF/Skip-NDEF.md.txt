@@ -1,0 +1,183 @@
+﻿---
+
+title: Skip NDEF
+
+catalog: true
+
+date: 2018-04-02 22:27:19
+
+subtitle:
+ FLAG_READER_SKIP_NDEF_CHECK这个flag在Android中的作用
+header-img:
+
+tags:
+- NFC
+- Android
+
+
+---
+
+## 关于SKIP NDEF
+
+
+
+### 前言
+
+
+
+&ensp;&ensp;&ensp;&ensp;最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。
+
+
+
+
+
+
+
+
+
+
+
+### 含义
+
+
+
+&ensp;&ensp;&ensp;&ensp;先来看下代码中对这个变量的定义的注释。
+
+
+```
+
+   /**
+     
+    * Flag for use with {@link #enableReaderMode(Activity, ReaderCallback, int, Bundle)}.
+     
+    * <p>
+     
+    * Setting this flag allows the caller to prevent the
+     
+    * platform from performing an NDEF check on the tags it
+     
+    * finds.
+     
+    */
+    
+    public static final int FLAG_READER_SKIP_NDEF_CHECK = 0x80; 
+
+```
+
+
+
+&ensp;&ensp;&ensp;&ensp;Google对这个变量的解释的意思是，这是个flag，它阻止了平台对NDEF信息的tag检查。其实也就是阻止TAG分发系统对这个NDEF信息进行检查分配。我们知道Android beam是两个devices之间的信息交互，此时两个devices都会获得NDEF TAG信息，但有的时候我们只想获取这个信息却不执行相对应的activity，那么这个时候，我们就需要使用这个变量了。
+
+
+
+&ensp;&ensp;&ensp;&ensp;我们需要用变量FLAG_READER_SKIP_NDEF_CHECK来做标记，在我们只需要读取NDEF信息但不执行相对应的activity时，会使用这个变量来告诉TAG分发系统，我们仅仅想要读取一些NDEF信息，不要检查NDEF信息，不要调用beam。
+
+
+
+
+### skip 流程
+
+
+
+- NfcService
+
+  
+
+&ensp;&ensp;&ensp;&ensp;在NFCServiceHandler中，对接收到的NDEF进行处理的时候，当分析到信息是NDEF_TAG的时候，会对信息的flag作对比，确认是否包含变量FLAG_READER_SKIP_NDEF_CHECK，如果包含那么会跳过NDEF的检测。
+   
+  
+
+```
+
+case MSG_NDEF_TAG:
+    
+... ...
+    
+    
+
+if (readerParams != null) {
+        
+    presenceCheckDelay = readerParams.presenceCheckDelay;
+        
+    if ((readerParams.flags & NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK) != 0) {
+
+            if (DBG) Log.d(TAG, "Skipping NDEF detection in reader mode");
+
+            tag.startPresenceChecking(presenceCheckDelay, callback);
+
+            dispatchTagEndpoint(tag, readerParams);
+
+            break;
+
+        }
+
+    }
+
+
+    ... ...
+
+  ```
+
+
+
+
+
+
+
+
+
+- CardReaderFragment
+
+
+
+  &ensp;&ensp;&ensp;&ensp;这是一个读卡器APP，用来读取传过来的NDEF数据，此时需要告诉对这个NDEF信息处理的handler，我们不需要激活相对应的activity，我们只想读取信息，所以我们需要设置一个flag来使得程序可以跳过NDEF检测。
+
+  
+  ```
+
+    // Recommend NfcAdapter flags for reading from other Android devices. Indicates that this
+
+    // activity is interested in NFC-A devices (including other Android devices), and that the
+
+    // system should not check for the presence of NDEF-formatted data (e.g. Android Beam).
+
+    public static int READER_FLAGS =
+
+            NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK;
+
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
