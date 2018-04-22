@@ -1,652 +1,1309 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/img/ironman-draw.png">
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <title>
-        
-          MilkZS | Zuo qi | Blog
-        
-    </title>
-
-    <link rel="canonical" href="http://milkdz.cn/">
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    <!-- Custom CSS --> 
-    <link rel="stylesheet" href="/css/beantech.min.css">
-    
-    <!-- Pygments Highlight CSS -->
-    <link rel="stylesheet" href="/css/highlight.css">
-
-    <link rel="stylesheet" href="/css/widget.css">
-
-    <link rel="stylesheet" href="/css/rocket.css">
-
-    <link rel="stylesheet" href="/css/signature.css">
-
-    <link rel="stylesheet" href="/css/toc.css">
-
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-    <!-- ga & ba script hoook -->
-    <script></script>
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Welcome To My Blog">
+<meta property="og:url" content="http://milkdz.cn/index.html">
+<meta property="og:site_name" content="Welcome To My Blog">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Welcome To My Blog">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://milkdz.cn/"/>
+
+
+
+
+
+  <title>Welcome To My Blog - 万般皆下品 唯有读书高</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
-	<!-- Modified by Yu-Hsuan Yen -->
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        
-            background-image: url('/img/header_img/home-bg-2-dark.png') 
-            /*config*/
-        
-    }
+  
+  
     
-    #signature{
-        background-image: url('/img/signature/ZuoqiSign.png');
-    }
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
     
-</style>
 
-<header class="intro-header" >
-    <!-- Signature -->
-    <div id="signature">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
-                    <div class="site-heading">
-                        <h1>Welcome To My Blog</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">万般皆下品 唯有读书高</span>
-                    </div>
-                
-
-
-                </div>
-            </div>
-        </div>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Welcome To My Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-</header>
-
-	
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Welcome To My Blog</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    
-
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archive/">Archives</a>
-                        </li>
-                        
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-
-    <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
-
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
-
-
-<div class="post-preview">
-
-    <a href="/2018/04/16/NFC基础知识/">
-        <h2 class="post-title">
-            NFC基础知识
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            NFC基础知识
-1. NFC的运行模式
-1.1 NFC包含三种主要的运行模式
-
-
-R/W模式
-    该模式交互是单向的。工作模式是具有NFC功能的设备（NFC Device）和NFC TAG之间进行的交互。但是只能由NFC向NFC TAG进行读取和写入操作，例如通过具有NFC功能的手机向北京公交地铁卡充值一样，只能由手机对卡进行查看余额，或者用手机对卡进行充值，但是不能由卡对手机进行读写操......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by MilkDZ on
-            2018-04-16
-        </p>
-        <div class="tags">
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/02/Skip-NDEF/">
-        <h2 class="post-title">
-            Skip NDEF
-        </h2>
-        <h3 class="post-subtitle">
-            FLAG_READER_SKIP_NDEF_CHECK这个flag在Android中的作用
-        </h3>
-        <div class="post-content-preview">
-            关于SKIP NDEF
-前言
-    最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。
-含义
-    先来看下代......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by MilkDZ on
-            2018-04-02
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Android" title="Android">Android</a>
-            
-              <a href="/tags/#NFC" title="NFC">NFC</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/01/开启Android源码中GPS相关的log/">
-        <h2 class="post-title">
-            开启Android源码中GPS相关的log
-        </h2>
-        <h3 class="post-subtitle">
-            通过修改文件打开Android源码中GPSlog开关
-        </h3>
-        <div class="post-content-preview">
-            打开类中的开关
-如何操作
-
-
-首先查看需要打log的手机中是否有/data/local.prop文件，如果有则使用git pull取出，如果没有则先在手机外新建一个loca.prop文件。
-
-
-打开local.prop文件，在里边将需要打log的类的log等级调高，一般调最高。比如：
-
-
-123log.tag.LocationManagerService=VERBOSE    log.tag......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by MilkDZ on
-            2018-04-01
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Log" title="Log">Log</a>
-            
-              <a href="/tags/#Android" title="Android">Android</a>
-            
-              <a href="/tags/#GPS" title="GPS">GPS</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2018/04/01/MakeFile中打Log/">
-        <h2 class="post-title">
-            MakeFile中打Log
-        </h2>
-        <h3 class="post-subtitle">
-            Android.mk中打log进行调试。
-        </h3>
-        <div class="post-content-preview">
-            在makefile中打印Log
-    在logcat中显示log信息,在mk文件中书写语句。
-
-$(warning xxxxx)
-
-    程序继续向下运行，不会阻塞。
-12345$(warning $(CLASS_NAME))$(warning "====specify line======")
-
-$(error xxxxx)
-
-    程序会阻塞，不再向下运行。
-12345$(erro......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by MilkDZ on
-            2018-04-01
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#MakeFile" title="MakeFile">MakeFile</a>
-            
-              <a href="/tags/#Log" title="Log">Log</a>
-            
-              <a href="/tags/#Android" title="Android">Android</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-
-                <!-- 如果开启评论功能 -->
-                
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/#MakeFile" title="MakeFile" rel="1">MakeFile</a>
-            
-        
-            
-            <a href="/tags/#Log" title="Log" rel="2">Log</a>
-            
-        
-            
-            <a href="/tags/#Android" title="Android" rel="3">Android</a>
-            
-        
-            
-            <a href="/tags/#NFC" title="NFC" rel="1">NFC</a>
-            
-        
-            
-            <a href="/tags/#GPS" title="GPS" rel="1">GPS</a>
-            
-        
-    </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/ironman-draw.png" />
-        
-
-        
-            <p>Hi,My chinese name is 左琦. English name is MilkDZ. Welcome to my blog!</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/MilkZS">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-        <hr>
-    
-        
-  <h5>RECENT POSTS</h3>
-  <div class="widget">
-    <ul>
       
-        <li>
-          <a href="/2018/04/16/NFC基础知识/">NFC基础知识</a>
-        </li>
+        <p class="site-subtitle">万般皆下品 唯有读书高</p>
       
-        <li>
-          <a href="/2018/04/02/Skip-NDEF/">Skip NDEF</a>
-        </li>
-      
-        <li>
-          <a href="/2018/04/01/开启Android源码中GPS相关的log/">开启Android源码中GPS相关的log</a>
-        </li>
-      
-        <li>
-          <a href="/2018/04/01/MakeFile中打Log/">MakeFile中打Log</a>
-        </li>
-      
-    </ul>
   </div>
 
-        <hr>
-    
-        
-    <h5>ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">4</span></li></ul>
-    </div>
-
-        <hr>
-    
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
         
-    </div>
-</div>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
 
 
-    <!-- Footer -->
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                
-                
-                
 
-                
+ </div>
+    </header>
 
-                
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
 
-                
-                    <li>
-                        <a target="_blank"  href="https://github.com/MilkZS">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
+  
 
-                
+  
+  
+  
 
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; MilkDZ 2018 
-                  <!--  <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> 
-                    <span style="display: inline-block; margin: 0 5px;">
-                        <i class="fa fa-heart"></i>
-                    </span> 
-                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
-                    </iframe> -->
-                </p>
-            </div>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/21/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/21/test/" itemprop="url">test</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-21T18:39:16+08:00">
+                2018-04-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
     </div>
-</footer>
+    
+    
+    
 
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
+    
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+    
 
-<!-- Custom Theme JavaScript -->
-<script src="/js/hux-blog.min.js"></script>
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/16/NFC基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/16/NFC基础知识/" itemprop="url">NFC基础知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T22:08:57+08:00">
+                2018-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2><span id="nfc基础知识">NFC基础知识</span></h2>
+<h3><span id="1-nfc的运行模式">1. NFC的运行模式</span></h3>
+<h4><span id="11-nfc包含三种主要的运行模式">1.1 NFC包含三种主要的运行模式</span></h4>
+<ul>
+<li>
+<p>R/W模式</p>
+<p>    该模式交互是单向的。工作模式是具有NFC功能的设备（NFC Device）和NFC TAG之间进行的交互。但是只能由NFC向NFC TAG进行读取和写入操作，例如通过具有NFC功能的手机向北京公交地铁卡充值一样，只能由手机对卡进行查看余额，或者用手机对卡进行充值，但是不能由卡对手机进行读写操作。</p>
+<p>    NFC TAG有四种类型，由不同的厂家推出。对应的四种芯片名分别是Topaz（ISO 14443<br>
+Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（ISO<br>
+14443 TypeA TypeB）。</p>
+</li>
+<li>
+<p>P2P模式</p>
+<p>    该模式交互是双向的。该模式是两个NFC Device之间进行信息的交互，互相读取写入信息。其中涉及到了几个关键词，LLC、LLCP、SNEP、CHP。LLC为P2P协议的最高层，该层使用的协议为LLCP协议，SNEP挨着LLC层，SNEP协议可以使得两个Device之间进行通信。这个过程个人理解类似于WEB中的TCP通信。</p>
+</li>
+<li>
+<p>CE模式</p>
+<p>    个人理解该模式主要用于停车场门卡系列，NFC位于手机的SIM卡中，用户通过接触TAG发生交互。</p>
+</li>
+</ul>
+<h4><span id="12-模式程序运行流程">1.2 模式程序运行流程</span></h4>
+<ul>
+<li>
+<p>R/W模式</p>
+<p>    该模式下,Android平台提供了两种分发系统：TAG分发系统和前台分发系统。</p>
+<p>A. TAG分发系统</p>
+<p>    当扫描到一个NFC TAG后，NFC系统模块会先尝试读取其中的内容，如果可以成功映射成Android系统直接支持的数据类型，那么NFC系统模块将会发送一个ACTION_NDEF_DISCOVERED（携带该NDEF消息和一个代表该NFC TAG的Tag对象）的Intent给那些注册了ACTION_NDEF_DISCOVERED通知感兴趣的ACtivity。如果找到了该ACtivity，则将该Intent发送给他，如果没找到，则尝试发送一个ACTION_TECH_DISCOVERED的Intent（包含一个代表目标的NFC Tag的Tag对象）。</p>
+<p>    如果不能转换成系统直接支持的数据类型，也会发送一个ACTION_TECH_DISCOVERED的Intent（包含一个代表目标的NFC Tag的Tag对象）。如果找打了对该Intent感兴趣的ACtivity，则将Intent发送给他。如果没找到，则NFC 模块最后发送一个ACTION_TAG_DISCOVERED的Intent（包含一个Tag对象）。寻找对它感兴趣的ACtivity并将Intent发送给他。</p>
+<p>B. 前台分发系统</p>
+<p>    TAG分发系统会搜寻系统内所有的满足条件的ACtivity，而前台分发系统只会寻找前台（当前显示的ACtivity）的满足条件的ACtivity。</p>
+</li>
+<li>
+<p>p2p模式</p>
+<p>    该模式使用了SNEP协议。个人理解，该模式重点在于发送端的处理，接收端使用TAG分发系统来接收信息并处理。</p>
+<p>    <strong>发送端重要的主要有两个函数：</strong></p>
+<p><font color="red">setNdefPushMessageCallback:</font>设置一个回调对象，如果该对象不为空，那么当前ACtivity会调用Android beam（Android 4.0以上才有）来发送所要发的内容。该函数作用是：两个设备在NFC有效的范围内时，系统会弹出数据发送通知框。如果用户选择本机发送数据，则NFC模块回调对象会获取需要发送的数据。</p>
+<p><font color="red">setOnNdefPushCompleteCallback:</font>当数据发送完毕后通知回调对象。当数据发送完毕后，系统会调用该回调对象的函数。</p>
+</li>
+<li>
+<p>CE模式</p>
+<p>    在Android平台中，需要应用程序加载一个nfc_extras,jar 的动态库才可以使用CE模式。</p>
+</li>
+</ul>
+<h3><span id="2-nfc系统模块">2. NFC系统模块</span></h3>
+<p>    系统模块运行在NFC.apk中。</p>
+<ul>
+<li>
+<p>NFCService</p>
+<p>    devices启动之后的主service，用来为NFC各种功能提供服务。</p>
+</li>
+<li>
+<p>P2pLinkManager</p>
+<p>    该包包含三个与传输相关的server，分别为SnepServer、NdefPushServer、HandoverServer每一个Server都有回调接口类，接口类的实现在P2pLinkManager的内部类来实现。</p>
+</li>
+<li>
+<p>HandoverServer</p>
+<p>    负责处理NFC Connection HandoverServer协议，具体的数据传输则由P2pLinkManager来实现。Android是默认使用蓝牙来传输数据的。</p>
+</li>
+<li>
+<p>P2pEventManager</p>
+<p>    用来处理P2p中和用户交互相关的逻辑。</p>
+</li>
+</ul>
+<h3><span id="3-google相关基本类">3. Google相关基本类</span></h3>
+<ul>
+<li>
+<p>NfcManager</p>
+<p>    一个NFC adapter的管理器，可以列出所有此android设备支持的NFC adapter.只不过大部分android 设备只有一个NFC adapter，所以你大部分情况下可以直接用静态方法 getDefaultAdapter(context)可以来获取适配器，这个适配器是全局的。</p>
+</li>
+<li>
+<p>NfcAdapter</p>
+<p>    表示本设备的NFC adapter,可以定义Intent来请求将系统检测到tags的提醒发送到你的Activity.并提供方法去注册前台tag提醒发布和前台NDEF推送。</p>
+</li>
+</ul>
+<p>    <font color="red">前台NDEF推送是当前android版本唯一支持的p2p NFC通信方式。</font></p>
+<ul>
+<li>
+<p>NdefMessage and NdefRecord</p>
+<p>    NDEF是NFC论坛定义的数据结构，用来有效的存数据到NFC tags.比如文本，URL，和其他MIME类型。一个NdefMessage扮演一个容器，这个容器存哪些发送和读到的数据。一个NdefMessage对象包含0或多个NdefRecord,每个NDEF record有一个类型，比如文本，URL，智慧型海报/广告，或其他MIME数据。在NDEFMessage里的第一个NfcRecord的类型用来发送tag到一个android设备上的activity。</p>
+</li>
+<li>
+<p>Tag</p>
+<p>    标示一个被动的NFC目标，比如tag，card，钥匙挂扣，甚至是一个电话模拟的的NFC卡。当一个tag被检测到，一个tag对象将被创建并且封装到一个Intent里，然后NFC发布系统将这个Intent用startActivity发送到注册了接受这种Intent的activity里。你可以用getTechList()方法来得到这个tag支持的技术细节和创建一个android.nfc.tech提供的相应的TagTechnology对象。</p>
+</li>
+</ul>
+<h3><span id="4-hce-和-se">4. HCE 和 SE</span></h3>
+<h4><span id="41-概念">4.1 概念</span></h4>
+<ul>
+<li>HCE：基于主机的卡模拟</li>
+<li>SE：安全元件的简称</li>
+</ul>
+<h4><span id="42-背景">4.2 背景</span></h4>
+<ul>
+<li>
+<p>HCE</p>
+<p>在一部配备NFC功能的手机中实现卡模拟，目前有两种方式：</p>
+<ol>
+<li>
+<p>基于硬件的虚拟卡模拟（VCM）</p>
+<p>    该模式下，需要提供安全模块SE，NFC外部读取器读取到外部指令传给SE进行处理，然后SE处<br>
+理完毕后传递给NFC控制器。</p>
+</li>
+<li>
+<p>基于软件的主机卡模拟（HCM）</p>
+<p>    该模式下，不需要提供SE，而是由在手机中运行的一个应用或云端的服务器来完成SE的功能。此时，NFC芯片接收到的数据或由操作系统传递给手机中的应用，或通过网络发送给云端服务器来完成交互。这两种方式都绕过了SE的限制。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>SE</p>
+<p>通常以芯片的方式存在，用来防止外部恶意数据，芯片中由加密和解密的逻辑电路。</p>
+</li>
+</ul>
+<h4><span id="43-应用">4.3 应用</span></h4>
+<p>    Android系统上的HCE技术是通过系统服务实现的（HCE服务），使用服务的优势是它可以一直在后台运行而不需要由用户界面，这样方便了用户的使用，用户在刷门禁卡或支付时候不需要打开程序，直接将手机贴上去就可以。当然，配合上一个完美的用户界面UI可以实现更多功能，如充值，查看余额等等。</p>
+<h4><span id="44-实现过程">4.4 实现过程</span></h4>
+<p>    想用HCE实现NFC功能，首先需要创建一个HCE服务，Android4.4以上由HCE服务提供的一个非常方便的基类，我们可以通过继承基类来实现自己需要的HCE服务。对于已经存在的NFC系统，可以在HCE服务中实现NFC读卡器期望的应用程协议。</p>
+<p>    <font color="red">注意：</font>一般尽量减少NFC设备之间的数据交换量从而来保证用户不需要花大量时间将手机贴在读卡器上。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/02/Skip-NDEF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/02/Skip-NDEF/" itemprop="url">Skip NDEF</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T22:27:19+08:00">
+                2018-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2><span id="关于skip-ndef">关于SKIP NDEF</span></h2>
+<h3><span id="前言">前言</span></h3>
+<p>    最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。</p>
+<h3><span id="含义">含义</span></h3>
+<p>    先来看下代码中对这个变量的定义的注释。</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line">  </span><br><span class="line"> * Flag for use with &#123;@link <span class="comment">#enableReaderMode(Activity, ReaderCallback, int, Bundle)&#125;.</span></span><br><span class="line">  </span><br><span class="line"> * &lt;p&gt;</span><br><span class="line">  </span><br><span class="line"> * Setting this flag allows the caller to prevent the</span><br><span class="line">  </span><br><span class="line"> * platform from performing an NDEF<span class="built_in"> check </span>on the tags it</span><br><span class="line">  </span><br><span class="line"> * finds.</span><br><span class="line">  </span><br><span class="line"> */</span><br><span class="line"> </span><br><span class="line"><span class="keyword"> public</span><span class="keyword"> static</span><span class="keyword"> final</span><span class="built_in"> int </span>F<span class="class">LAG_READER_SKIP_NDEF_CHECK = 0x80;</span></span><br></pre></td></tr></table></figure>
+<p>    Google对这个变量的解释的意思是，这是个flag，它阻止了平台对NDEF信息的tag检查。其实也就是阻止TAG分发系统对这个NDEF信息进行检查分配。我们知道Android beam是两个devices之间的信息交互，此时两个devices都会获得NDEF TAG信息，但有的时候我们只想获取这个信息却不执行相对应的activity，那么这个时候，我们就需要使用这个变量了。</p>
+<p>    我们需要用变量FLAG_READER_SKIP_NDEF_CHECK来做标记，在我们只需要读取NDEF信息但不执行相对应的activity时，会使用这个变量来告诉TAG分发系统，我们仅仅想要读取一些NDEF信息，不要检查NDEF信息，不要调用beam。</p>
+<h3><span id="skip-流程">skip 流程</span></h3>
+<ul>
+<li>NfcService</li>
+</ul>
+<p>    在NFCServiceHandler中，对接收到的NDEF进行处理的时候，当分析到信息是NDEF_TAG的时候，会对信息的flag作对比，确认是否包含变量FLAG_READER_SKIP_NDEF_CHECK，如果包含那么会跳过NDEF的检测。</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">case</span> MSG_NDEF_TAG:</span><br><span class="line">    </span><br><span class="line"><span class="params">...</span> <span class="params">...</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (readerParams != <span class="built_in">null</span>) &#123;</span><br><span class="line">        </span><br><span class="line">    presenceCheckDelay = readerParams.presenceCheckDelay;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> ((readerParams.flags &amp; NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK) != <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (DBG) <span class="keyword">Log</span>.d(<span class="built_in">TAG</span>, <span class="string">"Skipping NDEF detection in reader mode"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="built_in">tag</span>.startPresenceChecking(presenceCheckDelay, callback);</span><br><span class="line"></span><br><span class="line">            dispatchTagEndpoint(<span class="built_in">tag</span>, readerParams);</span><br><span class="line"></span><br><span class="line">            break;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="params">...</span> <span class="params">...</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>CardReaderFragment</li>
+</ul>
+<p>    这是一个读卡器APP，用来读取传过来的NDEF数据，此时需要告诉对这个NDEF信息处理的handler，我们不需要激活相对应的activity，我们只想读取信息，所以我们需要设置一个flag来使得程序可以跳过NDEF检测。</p>
+  <figure class="highlight mizar"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// Recommend NfcAdapter flags <span class="keyword">for</span> reading <span class="keyword">from</span> other Android devices. Indicates <span class="keyword">that</span> this</span><br><span class="line"></span><br><span class="line">// activity <span class="keyword">is</span> interested <span class="keyword">in</span> NFC-A devices (including other Android devices), <span class="keyword">and</span> <span class="keyword">that</span> the</span><br><span class="line"></span><br><span class="line">// system should <span class="keyword">not</span> check <span class="keyword">for</span> the presence <span class="keyword">of</span> NDEF-formatted data (e.g. Android Beam).</span><br><span class="line"></span><br><span class="line">public static int READER_FLAGS =</span><br><span class="line"></span><br><span class="line">        NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/01/开启Android源码中GPS相关的log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/01/开启Android源码中GPS相关的log/" itemprop="url">开启Android源码中GPS相关的log</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T22:26:39+08:00">
+                2018-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3><span id="打开类中的开关">打开类中的开关</span></h3>
+<h4><span id="如何操作">如何操作</span></h4>
+<ol>
+<li>
+<p>首先查看需要打log的手机中是否有/data/local.prop文件，如果有则使用git pull取出，如果没有则先在手机外新建一个loca.prop文件。</p>
+</li>
+<li>
+<p>打开local.prop文件，在里边将需要打log的类的log等级调高，一般调最高。比如：</p>
+</li>
+</ol>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">log<span class="selector-class">.tag</span><span class="selector-class">.LocationManagerService</span>=VERBOSE</span><br><span class="line">    </span><br><span class="line">log<span class="selector-class">.tag</span><span class="selector-class">.GnssLocationProvider</span>=VERBOSE</span><br></pre></td></tr></table></figure>
+<p>这样做可以将类LocationManagerService的log等级调高，打开了我们的log开关。</p>
+<ol start="3">
+<li>
+<p>将修改后或新建后的local.prop文件使用git push 放入手机/data/local.prop中。</p>
+</li>
+<li>
+<p>重启手机</p>
+</li>
+</ol>
+<h4><span id="原理">原理</span></h4>
+<blockquote>
+<p>frameworks/base/core/java/android/util/Log.java</p>
+</blockquote>
+<p>    在Log.java中，关于方法 isLoggable()中有以下描述。故我们可以这样操作进行批量打开log的开关。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">The default level of any tag is <span class="keyword">set</span> <span class="keyword">to</span> INFO. This means that <span class="keyword">any</span> <span class="keyword">level</span> above <span class="keyword">and</span> <span class="keyword">including</span></span><br><span class="line">     </span><br><span class="line">*  INFO will be logged. <span class="keyword">Before</span> you make <span class="keyword">any</span> calls <span class="keyword">to</span> a <span class="keyword">logging</span> method you should <span class="keyword">check</span> <span class="keyword">to</span> see</span><br><span class="line">    </span><br><span class="line">*  <span class="keyword">if</span> your tag should be logged. You can <span class="keyword">change</span> the <span class="keyword">default</span> <span class="keyword">level</span> <span class="keyword">by</span> setting a <span class="keyword">system</span> property:</span><br><span class="line">  </span><br><span class="line">*      <span class="string">'setprop log.tag.&amp;lt;YOUR_LOG_TAG&gt; &amp;lt;LEVEL&gt;'</span></span><br><span class="line">     </span><br><span class="line">*  <span class="keyword">Where</span> <span class="keyword">level</span> <span class="keyword">is</span> either VERBOSE, DEBUG, INFO, WARN, <span class="keyword">ERROR</span>, ASSERT, <span class="keyword">or</span> SUPPRESS. SUPPRESS will</span><br><span class="line">     </span><br><span class="line">*  turn <span class="keyword">off</span> all <span class="keyword">logging</span> <span class="keyword">for</span> your tag. You can also <span class="keyword">create</span> a local.prop <span class="keyword">file</span> that <span class="keyword">with</span> the</span><br><span class="line">     </span><br><span class="line">*  <span class="keyword">following</span> <span class="keyword">in</span> it:</span><br><span class="line">     </span><br><span class="line">*      <span class="string">'log.tag.&amp;lt;YOUR_LOG_TAG&gt;=&amp;lt;LEVEL&gt;'</span></span><br><span class="line">     </span><br><span class="line">*  <span class="keyword">and</span> place that <span class="keyword">in</span> /<span class="keyword">data</span>/local.prop.</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/01/MakeFile中打Log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/01/MakeFile中打Log/" itemprop="url">MakeFile中打Log</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T22:06:20+08:00">
+                2018-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3><span id="在makefile中打印log">在makefile中打印Log</span></h3>
+<p>    在logcat中显示log信息,在mk文件中书写语句。</p>
+<ul>
+<li>$(warning xxxxx)</li>
+</ul>
+<p>    程序继续向下运行，不会阻塞。</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>$(error xxxxx)</li>
+</ul>
+<p>    程序会阻塞，不再向下运行。</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
+<h3><span id="将log信息写入到文件中">将log信息写入到文件中</span></h3>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(shell echo <span class="string">"it go in the if "</span><span class="meta">&gt;&gt;</span>$(TARGET_OUT_VENDOR)/firmware/echo_file)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">MilkDZ</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/MilkZS" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:774765813@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MilkDZ</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://milkdz.cn/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-<!-- Google Analytics -->
-
-
-<script>
-    // dynamic User by Hux
-    var _gaId = 'UA-XXXXXXXX-X';
-    var _gaDomain = 'yoursite';
-
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
-
-
-
-
-<!-- Baidu Tongji -->
 
 
 
 
 
 
-	<a id="rocket" href="#top" class=""></a>
-	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
-    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-<!-- Image to hack wechat -->
-<img src="http://milkdz.cn/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
-
 </html>
