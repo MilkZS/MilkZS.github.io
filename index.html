@@ -259,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/21/test/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/24/GPS术语/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -278,7 +278,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/21/test/" itemprop="url">test</a></h1>
+                <a class="post-title-link" href="/2018/04/24/GPS术语/" itemprop="url">GPS术语</a></h1>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-21T18:39:16+08:00">
-                2018-04-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-24T22:01:52+08:00">
+                2018-04-24
               </time>
             
 
@@ -329,9 +329,22 @@
 
       
         
-          
-            
-          
+          <h2>GPS术语</h2>
+<h4>AFLT</h4>
+<blockquote>
+<p>advanced forward-link trilateration 先进的前向链路三边测量</p>
+</blockquote>
+<h4>ALE</h4>
+<blockquote>
+<p>Aggregate Location Estimator,综合位置估算器</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/24/GPS术语/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -685,28 +698,16 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
 
       
         
-          
-            <h2><span id="关于skip-ndef">关于SKIP NDEF</span></h2>
-<h3><span id="前言">前言</span></h3>
+          <h2>关于SKIP NDEF</h2>
+<h3>前言</h3>
 <p>    最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。</p>
-<h3><span id="含义">含义</span></h3>
-<p>    先来看下代码中对这个变量的定义的注释。</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line">  </span><br><span class="line"> * Flag for use with &#123;@link <span class="comment">#enableReaderMode(Activity, ReaderCallback, int, Bundle)&#125;.</span></span><br><span class="line">  </span><br><span class="line"> * &lt;p&gt;</span><br><span class="line">  </span><br><span class="line"> * Setting this flag allows the caller to prevent the</span><br><span class="line">  </span><br><span class="line"> * platform from performing an NDEF<span class="built_in"> check </span>on the tags it</span><br><span class="line">  </span><br><span class="line"> * finds.</span><br><span class="line">  </span><br><span class="line"> */</span><br><span class="line"> </span><br><span class="line"><span class="keyword"> public</span><span class="keyword"> static</span><span class="keyword"> final</span><span class="built_in"> int </span>F<span class="class">LAG_READER_SKIP_NDEF_CHECK = 0x80;</span></span><br></pre></td></tr></table></figure>
-<p>    Google对这个变量的解释的意思是，这是个flag，它阻止了平台对NDEF信息的tag检查。其实也就是阻止TAG分发系统对这个NDEF信息进行检查分配。我们知道Android beam是两个devices之间的信息交互，此时两个devices都会获得NDEF TAG信息，但有的时候我们只想获取这个信息却不执行相对应的activity，那么这个时候，我们就需要使用这个变量了。</p>
-<p>    我们需要用变量FLAG_READER_SKIP_NDEF_CHECK来做标记，在我们只需要读取NDEF信息但不执行相对应的activity时，会使用这个变量来告诉TAG分发系统，我们仅仅想要读取一些NDEF信息，不要检查NDEF信息，不要调用beam。</p>
-<h3><span id="skip-流程">skip 流程</span></h3>
-<ul>
-<li>NfcService</li>
-</ul>
-<p>    在NFCServiceHandler中，对接收到的NDEF进行处理的时候，当分析到信息是NDEF_TAG的时候，会对信息的flag作对比，确认是否包含变量FLAG_READER_SKIP_NDEF_CHECK，如果包含那么会跳过NDEF的检测。</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">case</span> MSG_NDEF_TAG:</span><br><span class="line">    </span><br><span class="line"><span class="params">...</span> <span class="params">...</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (readerParams != <span class="built_in">null</span>) &#123;</span><br><span class="line">        </span><br><span class="line">    presenceCheckDelay = readerParams.presenceCheckDelay;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> ((readerParams.flags &amp; NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK) != <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (DBG) <span class="keyword">Log</span>.d(<span class="built_in">TAG</span>, <span class="string">"Skipping NDEF detection in reader mode"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="built_in">tag</span>.startPresenceChecking(presenceCheckDelay, callback);</span><br><span class="line"></span><br><span class="line">            dispatchTagEndpoint(<span class="built_in">tag</span>, readerParams);</span><br><span class="line"></span><br><span class="line">            break;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="params">...</span> <span class="params">...</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>CardReaderFragment</li>
-</ul>
-<p>    这是一个读卡器APP，用来读取传过来的NDEF数据，此时需要告诉对这个NDEF信息处理的handler，我们不需要激活相对应的activity，我们只想读取信息，所以我们需要设置一个flag来使得程序可以跳过NDEF检测。</p>
-  <figure class="highlight mizar"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// Recommend NfcAdapter flags <span class="keyword">for</span> reading <span class="keyword">from</span> other Android devices. Indicates <span class="keyword">that</span> this</span><br><span class="line"></span><br><span class="line">// activity <span class="keyword">is</span> interested <span class="keyword">in</span> NFC-A devices (including other Android devices), <span class="keyword">and</span> <span class="keyword">that</span> the</span><br><span class="line"></span><br><span class="line">// system should <span class="keyword">not</span> check <span class="keyword">for</span> the presence <span class="keyword">of</span> NDEF-formatted data (e.g. Android Beam).</span><br><span class="line"></span><br><span class="line">public static int READER_FLAGS =</span><br><span class="line"></span><br><span class="line">        NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK;</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/02/Skip-NDEF/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -823,9 +824,8 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
 
       
         
-          
-            <h3><span id="打开类中的开关">打开类中的开关</span></h3>
-<h4><span id="如何操作">如何操作</span></h4>
+          <h3>打开类中的开关</h3>
+<h4>如何操作</h4>
 <ol>
 <li>
 <p>首先查看需要打log的手机中是否有/data/local.prop文件，如果有则使用git pull取出，如果没有则先在手机外新建一个loca.prop文件。</p>
@@ -834,24 +834,13 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
 <p>打开local.prop文件，在里边将需要打log的类的log等级调高，一般调最高。比如：</p>
 </li>
 </ol>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">log<span class="selector-class">.tag</span><span class="selector-class">.LocationManagerService</span>=VERBOSE</span><br><span class="line">    </span><br><span class="line">log<span class="selector-class">.tag</span><span class="selector-class">.GnssLocationProvider</span>=VERBOSE</span><br></pre></td></tr></table></figure>
-<p>这样做可以将类LocationManagerService的log等级调高，打开了我们的log开关。</p>
-<ol start="3">
-<li>
-<p>将修改后或新建后的local.prop文件使用git push 放入手机/data/local.prop中。</p>
-</li>
-<li>
-<p>重启手机</p>
-</li>
-</ol>
-<h4><span id="原理">原理</span></h4>
-<blockquote>
-<p>frameworks/base/core/java/android/util/Log.java</p>
-</blockquote>
-<p>    在Log.java中，关于方法 isLoggable()中有以下描述。故我们可以这样操作进行批量打开log的开关。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">The default level of any tag is <span class="keyword">set</span> <span class="keyword">to</span> INFO. This means that <span class="keyword">any</span> <span class="keyword">level</span> above <span class="keyword">and</span> <span class="keyword">including</span></span><br><span class="line">     </span><br><span class="line">*  INFO will be logged. <span class="keyword">Before</span> you make <span class="keyword">any</span> calls <span class="keyword">to</span> a <span class="keyword">logging</span> method you should <span class="keyword">check</span> <span class="keyword">to</span> see</span><br><span class="line">    </span><br><span class="line">*  <span class="keyword">if</span> your tag should be logged. You can <span class="keyword">change</span> the <span class="keyword">default</span> <span class="keyword">level</span> <span class="keyword">by</span> setting a <span class="keyword">system</span> property:</span><br><span class="line">  </span><br><span class="line">*      <span class="string">'setprop log.tag.&amp;lt;YOUR_LOG_TAG&gt; &amp;lt;LEVEL&gt;'</span></span><br><span class="line">     </span><br><span class="line">*  <span class="keyword">Where</span> <span class="keyword">level</span> <span class="keyword">is</span> either VERBOSE, DEBUG, INFO, WARN, <span class="keyword">ERROR</span>, ASSERT, <span class="keyword">or</span> SUPPRESS. SUPPRESS will</span><br><span class="line">     </span><br><span class="line">*  turn <span class="keyword">off</span> all <span class="keyword">logging</span> <span class="keyword">for</span> your tag. You can also <span class="keyword">create</span> a local.prop <span class="keyword">file</span> that <span class="keyword">with</span> the</span><br><span class="line">     </span><br><span class="line">*  <span class="keyword">following</span> <span class="keyword">in</span> it:</span><br><span class="line">     </span><br><span class="line">*      <span class="string">'log.tag.&amp;lt;YOUR_LOG_TAG&gt;=&amp;lt;LEVEL&gt;'</span></span><br><span class="line">     </span><br><span class="line">*  <span class="keyword">and</span> place that <span class="keyword">in</span> /<span class="keyword">data</span>/local.prop.</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/01/开启Android源码中GPS相关的log/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -968,23 +957,19 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
 
       
         
-          
-            <h3><span id="在makefile中打印log">在makefile中打印Log</span></h3>
+          <h3>在makefile中打印Log</h3>
 <p>    在logcat中显示log信息,在mk文件中书写语句。</p>
 <ul>
 <li>$(warning xxxxx)</li>
 </ul>
 <p>    程序继续向下运行，不会阻塞。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>$(error xxxxx)</li>
-</ul>
-<p>    程序会阻塞，不再向下运行。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
-<h3><span id="将log信息写入到文件中">将log信息写入到文件中</span></h3>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(shell echo <span class="string">"it go in the if "</span><span class="meta">&gt;&gt;</span>$(TARGET_OUT_VENDOR)/firmware/echo_file)</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/01/MakeFile中打Log/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1077,7 +1062,7 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>

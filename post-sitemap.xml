@@ -7,8 +7,32 @@
     </url>
 
     <url>
-        <loc>http://milkdz.cn/2018/04/21/test/</loc>
-        <lastmod>2018-04-21T10:39:16.866Z</lastmod>
+        <loc>http://milkdz.cn/2018/04/01/MakeFile%E4%B8%AD%E6%89%93Log/</loc>
+        <lastmod>2018-04-24T14:07:09.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/2018/04/01/%E5%BC%80%E5%90%AFAndroid%E6%BA%90%E7%A0%81%E4%B8%ADGPS%E7%9B%B8%E5%85%B3%E7%9A%84log/</loc>
+        <lastmod>2018-04-24T14:06:59.902Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/2018/04/02/Skip-NDEF/</loc>
+        <lastmod>2018-04-24T14:06:29.842Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/2018/04/24/GPS%E6%9C%AF%E8%AF%AD/</loc>
+        <lastmod>2018-04-24T14:03:56.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,30 +41,6 @@
     <url>
         <loc>http://milkdz.cn/2018/04/16/NFC%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
         <lastmod>2018-04-19T14:03:36.958Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/02/Skip-NDEF/</loc>
-        <lastmod>2018-04-02T14:41:47.389Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/01/%E5%BC%80%E5%90%AFAndroid%E6%BA%90%E7%A0%81%E4%B8%ADGPS%E7%9B%B8%E5%85%B3%E7%9A%84log/</loc>
-        <lastmod>2018-04-01T14:32:23.192Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/01/MakeFile%E4%B8%AD%E6%89%93Log/</loc>
-        <lastmod>2018-04-01T14:16:46.538Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

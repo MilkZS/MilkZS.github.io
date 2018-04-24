@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android,NFC," />
+  <meta name="keywords" content="NFC,Android," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。 含义     先来看下代码中对">
-<meta name="keywords" content="Android,NFC">
+<meta name="description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。">
+<meta name="keywords" content="NFC,Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Skip NDEF">
 <meta property="og:url" content="http://milkdz.cn/2018/04/02/Skip-NDEF/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。 含义     先来看下代码中对">
+<meta property="og:description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-02T14:41:47.389Z">
+<meta property="og:updated_time" content="2018-04-24T14:06:29.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Skip NDEF">
-<meta name="twitter:description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。 含义     先来看下代码中对">
+<meta name="twitter:description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。">
 
 
 
@@ -333,6 +333,7 @@
         <h2><span id="关于skip-ndef">关于SKIP NDEF</span></h2>
 <h3><span id="前言">前言</span></h3>
 <p>    最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。</p>
+<a id="more"></a>
 <h3><span id="含义">含义</span></h3>
 <p>    先来看下代码中对这个变量的定义的注释。</p>
 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line">  </span><br><span class="line"> * Flag for use with &#123;@link <span class="comment">#enableReaderMode(Activity, ReaderCallback, int, Bundle)&#125;.</span></span><br><span class="line">  </span><br><span class="line"> * &lt;p&gt;</span><br><span class="line">  </span><br><span class="line"> * Setting this flag allows the caller to prevent the</span><br><span class="line">  </span><br><span class="line"> * platform from performing an NDEF<span class="built_in"> check </span>on the tags it</span><br><span class="line">  </span><br><span class="line"> * finds.</span><br><span class="line">  </span><br><span class="line"> */</span><br><span class="line"> </span><br><span class="line"><span class="keyword"> public</span><span class="keyword"> static</span><span class="keyword"> final</span><span class="built_in"> int </span>F<span class="class">LAG_READER_SKIP_NDEF_CHECK = 0x80;</span></span><br></pre></td></tr></table></figure>
@@ -366,9 +367,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
             <a href="/tags/NFC/" rel="tag"># NFC</a>
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
           
         </div>
       
@@ -483,7 +484,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
