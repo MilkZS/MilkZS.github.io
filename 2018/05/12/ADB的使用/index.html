@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="MakeFile,Log,Android," />
+  <meta name="keywords" content="ADB," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在makefile中打印Log     在logcat中显示log信息,在mk文件中书写语句。  $(warning xxxxx)      程序继续向下运行，不会阻塞。">
-<meta name="keywords" content="MakeFile,Log,Android">
+<meta name="description" content="ADB 参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
+<meta name="keywords" content="ADB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MakeFile中打Log">
-<meta property="og:url" content="http://milkdz.cn/2018/04/01/MakeFile中打Log/index.html">
+<meta property="og:title" content="ADB的使用">
+<meta property="og:url" content="http://milkdz.cn/2018/05/12/ADB的使用/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="在makefile中打印Log     在logcat中显示log信息,在mk文件中书写语句。  $(warning xxxxx)      程序继续向下运行，不会阻塞。">
+<meta property="og:description" content="ADB 参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T14:07:09.464Z">
+<meta property="og:updated_time" content="2018-05-12T02:19:59.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MakeFile中打Log">
-<meta name="twitter:description" content="在makefile中打印Log     在logcat中显示log信息,在mk文件中书写语句。  $(warning xxxxx)      程序继续向下运行，不会阻塞。">
+<meta name="twitter:title" content="ADB的使用">
+<meta name="twitter:description" content="ADB 参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/04/01/MakeFile中打Log/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/05/12/ADB的使用/"/>
 
 
 
 
 
-  <title>MakeFile中打Log | Welcome To My Blog</title>
+  <title>ADB的使用 | Welcome To My Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/01/MakeFile中打Log/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/05/12/ADB的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MakeFile中打Log</h1>
+          <h1 class="post-title" itemprop="name headline">ADB的使用</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T22:06:20+08:00">
-                2018-04-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-12T10:10:39+08:00">
+                2018-05-12
               </time>
             
 
@@ -302,6 +302,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -330,21 +352,77 @@
       
 
       
-        <h3><span id="在makefile中打印log">在makefile中打印Log</span></h3>
-<p>    在logcat中显示log信息,在mk文件中书写语句。</p>
+        <h2><span id="adb">ADB</span></h2>
+<h3><span id="参数列表">参数列表</span></h3>
 <ul>
-<li>$(warning xxxxx)</li>
+<li>
+<p>-s    设置输出日志的标签，只显示该标签的日志</p>
+</li>
+<li>
+<p>-f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功</p>
+</li>
+<li>
+<p>-r    按照每千字节输出日志</p>
+</li>
+<li>
+<p>-n    设置日志输出的最大数目 需要-r参数</p>
+</li>
+<li>
+<p>-v    设置日志的输出格式，只能设置一项</p>
+</li>
+<li>
+<p>-c    清空所有的日志缓冲信息</p>
+</li>
 </ul>
-<p>    程序继续向下运行，不会阻塞。</p>
 <a id="more"></a>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>$(error xxxxx)</li>
+<li>
+<p>-d    将缓冲的日志输出到屏幕上</p>
+</li>
+<li>
+<p>-t    输出最近的几行日志，输出完退出，不会阻塞</p>
+</li>
+<li>
+<p>-g    查看日志缓冲区信息</p>
+</li>
+<li>
+<p>-b    加载一个日志缓冲区</p>
+</li>
+<li>
+<p>-B    以二进制形式输出日志</p>
+</li>
 </ul>
-<p>    程序会阻塞，不再向下运行。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
-<h3><span id="将log信息写入到文件中">将log信息写入到文件中</span></h3>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(shell echo <span class="string">"it go in the if "</span><span class="meta">&gt;&gt;</span>$(TARGET_OUT_VENDOR)/firmware/echo_file)</span><br></pre></td></tr></table></figure>
+<h3><span id="命令的使用">命令的使用</span></h3>
+<h5><span id="1-adb-devices">1. adb devices</span></h5>
+<p>    指令 adb devices 查看手机是否链接上adb</p>
+<h5><span id="2-adb-logcat">2. adb logcat</span></h5>
+<p>    指令 adb logcat &gt; XXX.txt 输出log并将其写入XXX文件中，注意过程中一直在输出log,<br>
+需要使用Ctrl+C来停止。</p>
+<h5><span id="3-adb-logcat-s">3. adb logcat -s</span></h5>
+<p>    输出指定标签的内容,例：<br>
+adb logcat -s System.out<br>
+输出指定标签“System.out”的信息</p>
+<h5><span id="4-adb-logcat-f">4. adb logcat -f</span></h5>
+<p>    输出日志信息到手机文件,adb logcat -f /sdcard/log.txt</p>
+<h5><span id="5-adb-logcat-v">5. adb logcat -v</span></h5>
+<p>    查看日志输出的相关信息。<br>
+<br>    查看日志的输出时间  adb logcat -v time<br>
+<br>    查看日志的输出时间和线程信息   adb logcat -v threadtime</p>
+<h5><span id="6-adb-shell">6. adb shell</span></h5>
+<p>    进入手机系统shell操作,使用adb shell可以在电脑终端上进入手机系统目录中，对手机进行相对应的操作。</p>
+<h5><span id="7-使用adb截图">7. 使用adb截图</span></h5>
+<p>    adb shell /sysytem/bin/screencap -p  /sdcard/screen.png</p>
+<h5><span id="8-adb-install-r">8. adb install -r</span></h5>
+<p>    向手机中安装软件，即apk文件在控制台中，使用指令adb  install -r xx.apk</p>
+<h5><span id="9-adb-push">9. adb push</span></h5>
+<p>    往手机中传入文件,adb push  xxx   /sdcard/</p>
+<h5><span id="10-adb-pull">10. adb pull</span></h5>
+<p>    从手机中拿取文件,adb pull  /sdcard/xxxx</p>
+<h5><span id="11-使用adb卸载软件">11. 使用adb卸载软件</span></h5>
+<p>    adb remount<br><br>
+    adb shell<br><br>
+    cd  目标目录<br><br>
+    rm xxx.apk</p>
 
       
     </div>
@@ -362,11 +440,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MakeFile/" rel="tag"># MakeFile</a>
-          
-            <a href="/tags/Log/" rel="tag"># Log</a>
-          
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/ADB/" rel="tag"># ADB</a>
           
         </div>
       
@@ -379,14 +453,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/24/GPS术语/" rel="next" title="GPS术语">
+                <i class="fa fa-chevron-left"></i> GPS术语
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/01/开启Android源码中GPS相关的log/" rel="prev" title="开启Android源码中GPS相关的log">
-                开启Android源码中GPS相关的log <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/16/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -535,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">在makefile中打印Log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">将log信息写入到文件中</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">ADB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">参数列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">命令的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1. adb devices</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2. adb logcat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">3. adb logcat -s</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">4. adb logcat -f</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">5. adb logcat -v</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">6. adb shell</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">7. 使用adb截图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.8.</span> <span class="nav-text">8. adb install -r</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.9.</span> <span class="nav-text">9. adb push</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.10.</span> <span class="nav-text">10. adb pull</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.11.</span> <span class="nav-text">11. 使用adb卸载软件</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

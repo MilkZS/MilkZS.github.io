@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="MakeFile,Log,Android," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,13 @@
 
 
 
-<meta name="description" content="在makefile中打印Log     在logcat中显示log信息,在mk文件中书写语句。  $(warning xxxxx)      程序继续向下运行，不会阻塞。">
-<meta name="keywords" content="MakeFile,Log,Android">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MakeFile中打Log">
-<meta property="og:url" content="http://milkdz.cn/2018/04/01/MakeFile中打Log/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Welcome To My Blog">
+<meta property="og:url" content="http://milkdz.cn/categories/GPS/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="在makefile中打印Log     在logcat中显示log信息,在mk文件中书写语句。  $(warning xxxxx)      程序继续向下运行，不会阻塞。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T14:07:09.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MakeFile中打Log">
-<meta name="twitter:description" content="在makefile中打印Log     在logcat中显示log信息,在mk文件中书写语句。  $(warning xxxxx)      程序继续向下运行，不会阻塞。">
+<meta name="twitter:title" content="Welcome To My Blog">
 
 
 
@@ -120,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/04/01/MakeFile中打Log/"/>
+  <link rel="canonical" href="http://milkdz.cn/categories/GPS/"/>
 
 
 
 
 
-  <title>MakeFile中打Log | Welcome To My Blog</title>
+  <title>Category: GPS | Welcome To My Blog</title>
   
 
 
@@ -145,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,165 +244,55 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block category">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>GPS<small>Category</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/01/MakeFile中打Log/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="MilkDZ">
-      <meta itemprop="description" content="true">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome To My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">MakeFile中打Log</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/04/24/GPS术语/" itemprop="url">
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span itemprop="name">GPS术语</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T22:06:20+08:00">
-                2018-04-01
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-04-24T22:01:52+08:00"
+              content="2018-04-24" >
+          04-24
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h3><span id="在makefile中打印log">在makefile中打印Log</span></h3>
-<p>    在logcat中显示log信息,在mk文件中书写语句。</p>
-<ul>
-<li>$(warning xxxxx)</li>
-</ul>
-<p>    程序继续向下运行，不会阻塞。</p>
-<a id="more"></a>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">warning</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>$(error xxxxx)</li>
-</ul>
-<p>    程序会阻塞，不再向下运行。</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> $(CLASS_NAME))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="keyword">error</span> <span class="string">"====specify line======"</span>)</span><br></pre></td></tr></table></figure>
-<h3><span id="将log信息写入到文件中">将log信息写入到文件中</span></h3>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(shell echo <span class="string">"it go in the if "</span><span class="meta">&gt;&gt;</span>$(TARGET_OUT_VENDOR)/firmware/echo_file)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/MakeFile/" rel="tag"># MakeFile</a>
-          
-            <a href="/tags/Log/" rel="tag"># Log</a>
-          
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/01/开启Android源码中GPS相关的log/" rel="prev" title="开启Android源码中GPS相关的log">
-                开启Android源码中GPS相关的log <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -415,10 +300,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -439,17 +320,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,22 +397,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">在makefile中打印Log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">将log信息写入到文件中</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -668,10 +524,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
