@@ -7,8 +7,32 @@
     </url>
 
     <url>
-        <loc>http://milkdz.cn/2018/05/16/test/</loc>
-        <lastmod>2018-05-16T13:45:43.913Z</lastmod>
+        <loc>http://milkdz.cn/2018/04/01/MakeFile%E4%B8%AD%E6%89%93Log/</loc>
+        <lastmod>2018-05-16T14:10:25.796Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/2018/04/01/%E5%BC%80%E5%90%AFAndroid%E6%BA%90%E7%A0%81%E4%B8%ADGPS%E7%9B%B8%E5%85%B3%E7%9A%84log/</loc>
+        <lastmod>2018-05-16T14:09:16.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/2018/04/02/Skip-NDEF/</loc>
+        <lastmod>2018-05-16T14:08:40.245Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/2018/04/16/NFC%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+        <lastmod>2018-05-16T14:06:54.092Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,38 +49,6 @@
     <url>
         <loc>http://milkdz.cn/2018/05/12/ADB%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
         <lastmod>2018-05-12T02:19:59.652Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/16/NFC%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-        <lastmod>2018-04-24T14:20:19.486Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/01/MakeFile%E4%B8%AD%E6%89%93Log/</loc>
-        <lastmod>2018-04-24T14:07:09.464Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/01/%E5%BC%80%E5%90%AFAndroid%E6%BA%90%E7%A0%81%E4%B8%ADGPS%E7%9B%B8%E5%85%B3%E7%9A%84log/</loc>
-        <lastmod>2018-04-24T14:06:59.902Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://milkdz.cn/2018/04/02/Skip-NDEF/</loc>
-        <lastmod>2018-04-24T14:06:29.842Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -14,8 +14,22 @@
     </url>
 
     <url>
+        <loc>http://milkdz.cn/categories/NFC/</loc>
+        <lastmod>2018-05-16T14:08:40.245Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://milkdz.cn/categories/GPS/</loc>
-        <lastmod>2018-05-12T02:20:14.033Z</lastmod>
+        <lastmod>2018-05-16T14:09:16.435Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/categories/Android/</loc>
+        <lastmod>2018-05-16T14:10:25.796Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
