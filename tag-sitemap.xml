@@ -101,14 +101,21 @@
 
     <url>
         <loc>http://milkdz.cn/tags/activity/</loc>
-        <lastmod>2018-05-23T12:57:28.294Z</lastmod>
+        <lastmod>2018-05-23T13:03:11.956Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://milkdz.cn/tags/activity%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F/</loc>
-        <lastmod>2018-05-23T12:57:28.294Z</lastmod>
+        <lastmod>2018-05-23T13:03:11.956Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/Activity%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
+        <lastmod>2018-05-23T13:03:33.423Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
