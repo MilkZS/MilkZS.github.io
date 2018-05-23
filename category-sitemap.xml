@@ -28,13 +28,6 @@
     </url>
 
     <url>
-        <loc>http://milkdz.cn/categories/Android/</loc>
-        <lastmod>2018-05-16T14:10:25.796Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://milkdz.cn/categories/JDK/</loc>
         <lastmod>2018-05-19T12:44:38.263Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -43,7 +36,14 @@
 
     <url>
         <loc>http://milkdz.cn/categories/%E5%B8%B8%E8%AF%86/</loc>
-        <lastmod>2018-05-19T12:49:30.252Z</lastmod>
+        <lastmod>2018-05-20T11:36:35.001Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/categories/Android/</loc>
+        <lastmod>2018-05-23T12:37:45.749Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
