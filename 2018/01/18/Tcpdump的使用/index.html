@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome To My Blog">
-<meta property="og:url" content="http://milkdz.cn/tags/Activity/index.html">
+<meta name="description" content="前言     在GPS的日常工作中，经常会使用到tcpdump工具来进行手机GPS服务器之间的GPS包的抓取。 配置tcpdump     首先需要下载好tcpdump，然后将相对应的工具配置到手机中。 1234567adb rootadb remountadb push tcpdump data/local/tcpdumpadb shellsuchmod 6755 data/local/tcpd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tcpdump的使用">
+<meta property="og:url" content="http://milkdz.cn/2018/01/18/Tcpdump的使用/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
+<meta property="og:description" content="前言     在GPS的日常工作中，经常会使用到tcpdump工具来进行手机GPS服务器之间的GPS包的抓取。 配置tcpdump     首先需要下载好tcpdump，然后将相对应的工具配置到手机中。 1234567adb rootadb remountadb push tcpdump data/local/tcpdumpadb shellsuchmod 6755 data/local/tcpd">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-29T13:27:36.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome To My Blog">
+<meta name="twitter:title" content="Tcpdump的使用">
+<meta name="twitter:description" content="前言     在GPS的日常工作中，经常会使用到tcpdump工具来进行手机GPS服务器之间的GPS包的抓取。 配置tcpdump     首先需要下载好tcpdump，然后将相对应的工具配置到手机中。 1234567adb rootadb remountadb push tcpdump data/local/tcpdumpadb shellsuchmod 6755 data/local/tcpd">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/tags/Activity/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/01/18/Tcpdump的使用/"/>
 
 
 
 
 
-  <title>Tag: Activity | Welcome To My Blog</title>
+  <title>Tcpdump的使用 | Welcome To My Blog</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,54 +248,156 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Activity<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/01/18/Tcpdump的使用/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/23/Activity/" itemprop="url">
-              
-                <span itemprop="name">Activity</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Tcpdump的使用</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-23T21:02:15+08:00"
-              content="2018-05-23" >
-          05-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-18T20:44:10+08:00">
+                2018-01-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3><span id="前言">前言</span></h3>
+<p>    在GPS的日常工作中，经常会使用到tcpdump工具来进行手机GPS服务器之间的GPS包的抓取。</p>
+<h3><span id="配置tcpdump">配置tcpdump</span></h3>
+<p>    首先需要下载好tcpdump，然后将相对应的工具配置到手机中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">adb root</span><br><span class="line">adb remount</span><br><span class="line">adb push tcpdump data/local/tcpdump</span><br><span class="line"></span><br><span class="line">adb shell</span><br><span class="line">su</span><br><span class="line">chmod 6755 data/local/tcpdump</span><br></pre></td></tr></table></figure>
+<p>    此时，tcpdump就已经在手机中配置好了，接下来就是使用了。</p>
+<h3><span id="抓取pcap包">抓取pcap包</span></h3>
+<p>    这个只需要在开始抓包之前进入到手机shell中进行抓包命令开始抓包就可以了。当然，这个最后抓取的包存在与手机中，需要使用adb pull从手机中拿出到电脑上，进行下一步的分析。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br><span class="line">cd data/local</span><br><span class="line">tcpdump  -p -s 0 -w /sdcard/001.pcap</span><br></pre></td></tr></table></figure>
+<p>    抓取后的包保存在手机的sdcard 中，方便我们后期在电脑上使用。</p>
+<h3><span id="参数">参数</span></h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-p  不使用混杂模式</span><br><span class="line">-s  用于指定抓取的数据包长度，如果设置为0，那么抓取完整的数据包</span><br><span class="line">-w  将结果写入一个pcap文件中，结果不直接在终端显示</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/10/Android系统中一些-注释的含义/" rel="next" title="Android系统中一些@注释的含义">
+                <i class="fa fa-chevron-left"></i> Android系统中一些@注释的含义
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/23/Service/" rel="prev" title="Service">
+                Service <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +405,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -319,8 +429,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -396,6 +515,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">配置tcpdump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">抓取pcap包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">参数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -523,6 +658,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -585,11 +724,6 @@
 
   
   <script type="text/javascript" src="/js/src/exturl.js?v=5.1.4"></script>
-
-
-</body>
-</html>
-=5.1.4"></script>
 
 
 </body>
