@@ -150,7 +150,28 @@
 
     <url>
         <loc>http://milkdz.cn/tags/NFC-TypeV/</loc>
-        <lastmod>2018-05-29T13:16:46.037Z</lastmod>
+        <lastmod>2018-05-29T13:19:21.640Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/A-GPS/</loc>
+        <lastmod>2018-05-29T13:22:19.865Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/MSA/</loc>
+        <lastmod>2018-05-29T13:22:19.865Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/MSB/</loc>
+        <lastmod>2018-05-29T13:22:19.865Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

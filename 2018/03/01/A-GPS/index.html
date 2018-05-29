@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ADB," />
+  <meta name="keywords" content="A-GPS,MSA,MSB," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ADB 参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
-<meta name="keywords" content="ADB">
+<meta name="description" content="AGPS的具体工作原理如下所示：  AGPS手机首先将本身的基站地址通过网络传输到位置服务器； 位置服务器根据该手机的大概位置传输与该位置相关的GPS辅助信息（包含GPS的星历和方位俯仰角等）到手机； 该手机的AGPS模块根据辅助信息（以提升GPS信号的第一锁定时间TTFF能力）接收GPS原始信号；">
+<meta name="keywords" content="A-GPS,MSA,MSB">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ADB的使用">
-<meta property="og:url" content="http://milkdz.cn/2018/05/12/ADB的使用/index.html">
+<meta property="og:title" content="A-GPS">
+<meta property="og:url" content="http://milkdz.cn/2018/03/01/A-GPS/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="ADB 参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
+<meta property="og:description" content="AGPS的具体工作原理如下所示：  AGPS手机首先将本身的基站地址通过网络传输到位置服务器； 位置服务器根据该手机的大概位置传输与该位置相关的GPS辅助信息（包含GPS的星历和方位俯仰角等）到手机； 该手机的AGPS模块根据辅助信息（以提升GPS信号的第一锁定时间TTFF能力）接收GPS原始信号；">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-12T02:19:59.652Z">
+<meta property="og:updated_time" content="2018-05-29T13:22:19.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ADB的使用">
-<meta name="twitter:description" content="ADB 参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
+<meta name="twitter:title" content="A-GPS">
+<meta name="twitter:description" content="AGPS的具体工作原理如下所示：  AGPS手机首先将本身的基站地址通过网络传输到位置服务器； 位置服务器根据该手机的大概位置传输与该位置相关的GPS辅助信息（包含GPS的星历和方位俯仰角等）到手机； 该手机的AGPS模块根据辅助信息（以提升GPS信号的第一锁定时间TTFF能力）接收GPS原始信号；">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/05/12/ADB的使用/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/03/01/A-GPS/"/>
 
 
 
 
 
-  <title>ADB的使用 | Welcome To My Blog</title>
+  <title>A-GPS | Welcome To My Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/05/12/ADB的使用/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/03/01/A-GPS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ADB的使用</h1>
+          <h1 class="post-title" itemprop="name headline">A-GPS</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-12T10:10:39+08:00">
-                2018-05-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-01T18:19:02+08:00">
+                2018-03-01
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/GPS/" itemprop="url" rel="index">
+                    <span itemprop="name">GPS</span>
                   </a>
                 </span>
 
@@ -352,77 +352,54 @@
       
 
       
-        <h2><span id="adb">ADB</span></h2>
-<h3><span id="参数列表">参数列表</span></h3>
-<ul>
-<li>
-<p>-s    设置输出日志的标签，只显示该标签的日志</p>
-</li>
-<li>
-<p>-f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功</p>
-</li>
-<li>
-<p>-r    按照每千字节输出日志</p>
-</li>
-<li>
-<p>-n    设置日志输出的最大数目 需要-r参数</p>
-</li>
-<li>
-<p>-v    设置日志的输出格式，只能设置一项</p>
-</li>
-<li>
-<p>-c    清空所有的日志缓冲信息</p>
-</li>
-</ul>
+        <h3><span id="agps的具体工作原理如下所示">AGPS的具体工作原理如下所示：</span></h3>
+<ol>
+<li>AGPS手机首先将本身的基站地址通过网络传输到位置服务器；</li>
+<li>位置服务器根据该手机的大概位置传输与该位置相关的GPS辅助信息（包含GPS的星历和方位俯仰角等）到手机；</li>
+<li>该手机的AGPS模块根据辅助信息（以提升GPS信号的第一锁定时间TTFF能力）接收GPS原始信号；</li>
+</ol>
 <a id="more"></a>
+<ol start="4">
+<li>手机在接收到GPS原始信号后解调信号，计算手机到卫星的伪距（伪距为受各种GPS误差影响的距离），并将有关信息通过网络传输到位置服务器；</li>
+<li>位置服务器根据传来的GPS伪距信息和来自其他定位设备（如差分GPS基准站等）的辅助信息完成对GPS信息的处理，并估算该手机的位置；</li>
+<li>位置服务器将该手机的位置通过网络传输到定位网关或应用平台。</li>
+</ol>
+<h3><span id="agps定位计算方式">Agps定位计算方式</span></h3>
+<h4><span id="第一种分法的定位方式">第一种分法的定位方式</span></h4>
 <ul>
 <li>
-<p>-d    将缓冲的日志输出到屏幕上</p>
+<p>MS-Assisted</p>
+<p>    移动终端将伪距等GPS测量值传送给AGPS定位服务器，网络侧计算移动终端的位置，再将定位结果送给移动终端或者其他相关的机构、中心。</p>
+<p>    在这种方式下，接收机适合单次运行模式，即它在实现首次定位后就关掉GPS。</p>
+<ul>
+<li>优点：降低终端的运算负荷；能进行较复杂运算以获得更精确的位置；</li>
+<li>缺点：定位过程中一旦网络中断，将失去定位结果。</li>
+</ul>
 </li>
 <li>
-<p>-t    输出最近的几行日志，输出完退出，不会阻塞</p>
-</li>
-<li>
-<p>-g    查看日志缓冲区信息</p>
-</li>
-<li>
-<p>-b    加载一个日志缓冲区</p>
-</li>
-<li>
-<p>-B    以二进制形式输出日志</p>
+<p>MS-Based</p>
+<p>    移动终端进行GPS测量，并且自己负责定位计算，而卫星轨道等辅助信息则来自网络，适合连续定位模式，但对终端系统的运算资源要求较高。</p>
 </li>
 </ul>
-<h3><span id="命令的使用">命令的使用</span></h3>
-<h5><span id="1-adb-devices">1. adb devices</span></h5>
-<p>    指令 adb devices 查看手机是否链接上adb</p>
-<h5><span id="2-adb-logcat">2. adb logcat</span></h5>
-<p>    指令 adb logcat &gt; XXX.txt 输出log并将其写入XXX文件中，注意过程中一直在输出log,<br>
-需要使用Ctrl+C来停止。</p>
-<h5><span id="3-adb-logcat-s">3. adb logcat -s</span></h5>
-<p>    输出指定标签的内容,例：<br>
-adb logcat -s System.out<br>
-输出指定标签“System.out”的信息</p>
-<h5><span id="4-adb-logcat-f">4. adb logcat -f</span></h5>
-<p>    输出日志信息到手机文件,adb logcat -f /sdcard/log.txt</p>
-<h5><span id="5-adb-logcat-v">5. adb logcat -v</span></h5>
-<p>    查看日志输出的相关信息。<br>
-<br>    查看日志的输出时间  adb logcat -v time<br>
-<br>    查看日志的输出时间和线程信息   adb logcat -v threadtime</p>
-<h5><span id="6-adb-shell">6. adb shell</span></h5>
-<p>    进入手机系统shell操作,使用adb shell可以在电脑终端上进入手机系统目录中，对手机进行相对应的操作。</p>
-<h5><span id="7-使用adb截图">7. 使用adb截图</span></h5>
-<p>    adb shell /sysytem/bin/screencap -p  /sdcard/screen.png</p>
-<h5><span id="8-adb-install-r">8. adb install -r</span></h5>
-<p>    向手机中安装软件，即apk文件在控制台中，使用指令adb  install -r xx.apk</p>
-<h5><span id="9-adb-push">9. adb push</span></h5>
-<p>    往手机中传入文件,adb push  xxx   /sdcard/</p>
-<h5><span id="10-adb-pull">10. adb pull</span></h5>
-<p>    从手机中拿取文件,adb pull  /sdcard/xxxx</p>
-<h5><span id="11-使用adb卸载软件">11. 使用adb卸载软件</span></h5>
-<p>    adb remount<br><br>
-    adb shell<br><br>
-    cd  目标目录<br><br>
-    rm xxx.apk</p>
+<h4><span id="第二种分法的定位方式">第二种分法的定位方式</span></h4>
+<p>    根据获取辅助信息的方式不同，AGPS又可分为以下两种</p>
+<ul>
+<li>
+<p>Online AGPS</p>
+<p>    设备启动时能够实时通过GSM、GPRS、CDMA或UMTS等方式取得辅助信息，每次定位需下载1~3K数据。</p>
+<p>    采用在线AGPS，不同的方法会影响其定位效率。</p>
+<ul>
+<li>第一个影响的因素为连网速度，这和通信，运营商的服务质量及用户所在位置息息相关，是较不可控的因素。</li>
+<li>第二个因素则与下载的卫星数据内容有关当所获得的有用资料愈多，定位的速度也就愈快。例如若能取得GPS时间（GPS Time），则可大幅缩短定位时间；这是因为卫星的移动很快（每秒移动800米），GPS时间有助于掌握卫星的确切位置。</li>
+</ul>
+<p>    GPS时间又可分为粗略GPS时间（Coarse GPS time）和精确GPS时间（Precise GPS time），前者的定位时间要约30秒钟，后者只需数秒钟即可。</p>
+</li>
+<li>
+<p>Offline AGPS</p>
+<p>    无须启动时与服务器建立连接，用户可以在方便的时候通过网络或其他方式下载今后一段时间的修正信息，存于本地存储器上，有效期最长可达14天，GPS接收机在启动的时候根据该数据可以计算出所需的星历数据，快速启动定位。1天星历信息约10K，14天的约90K。</p>
+<p>    AGPS接收星历信息等，用来减少TTFF时间。</p>
+</li>
+</ul>
 
       
     </div>
@@ -440,7 +417,11 @@ adb logcat -s System.out<br>
       
         <div class="post-tags">
           
-            <a href="/tags/ADB/" rel="tag"># ADB</a>
+            <a href="/tags/A-GPS/" rel="tag"># A-GPS</a>
+          
+            <a href="/tags/MSA/" rel="tag"># MSA</a>
+          
+            <a href="/tags/MSB/" rel="tag"># MSB</a>
           
         </div>
       
@@ -453,8 +434,8 @@ adb logcat -s System.out<br>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/05/git-patch/" rel="next" title="git patch">
-                <i class="fa fa-chevron-left"></i> git patch
+              <a href="/2018/02/23/SuppressWarnings/" rel="next" title="@SuppressWarnings">
+                <i class="fa fa-chevron-left"></i> @SuppressWarnings
               </a>
             
           </div>
@@ -463,8 +444,8 @@ adb logcat -s System.out<br>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/19/线程和进程/" rel="prev" title="线程和进程">
-                线程和进程 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/23/Activity四种启动模式/" rel="prev" title="Activity四种启动模式">
+                Activity四种启动模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -613,7 +594,7 @@ adb logcat -s System.out<br>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">ADB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">参数列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">命令的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1. adb devices</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2. adb logcat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">3. adb logcat -s</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">4. adb logcat -f</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">5. adb logcat -v</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">6. adb shell</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">7. 使用adb截图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.8.</span> <span class="nav-text">8. adb install -r</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.9.</span> <span class="nav-text">9. adb push</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.10.</span> <span class="nav-text">10. adb pull</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.0.11.</span> <span class="nav-text">11. 使用adb卸载软件</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">AGPS的具体工作原理如下所示：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Agps定位计算方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">第一种分法的定位方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">第二种分法的定位方式</span></a></li></ol></li></ol></div>
             
 
           </div>
