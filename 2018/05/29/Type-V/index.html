@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="service," />
+  <meta name="keywords" content="NFC-TypeV," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1 概念     疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。">
-<meta name="keywords" content="service">
+<meta name="description" content="1 名词解释 NCI：NFC Controller Interface ACM：Active Communication Mode P2P：peer-to-peer 2 前言     Type-V是一种新的TAG 技术，于2015年推出。Type-V提供了一种单一的通信模式，Type-V技术是基于RF技术的，符合ISO/IEC15693标准，可以和其他实现了ISO/IEC 15693规范的记忆性T">
+<meta name="keywords" content="NFC-TypeV">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Service">
-<meta property="og:url" content="http://milkdz.cn/2018/01/23/Service/index.html">
+<meta property="og:title" content="Type-V">
+<meta property="og:url" content="http://milkdz.cn/2018/05/29/Type-V/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="1 概念     疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。">
+<meta property="og:description" content="1 名词解释 NCI：NFC Controller Interface ACM：Active Communication Mode P2P：peer-to-peer 2 前言     Type-V是一种新的TAG 技术，于2015年推出。Type-V提供了一种单一的通信模式，Type-V技术是基于RF技术的，符合ISO/IEC15693标准，可以和其他实现了ISO/IEC 15693规范的记忆性T">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-23T12:37:45.749Z">
+<meta property="og:updated_time" content="2018-05-29T13:16:46.037Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Service">
-<meta name="twitter:description" content="1 概念     疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。">
+<meta name="twitter:title" content="Type-V">
+<meta name="twitter:description" content="1 名词解释 NCI：NFC Controller Interface ACM：Active Communication Mode P2P：peer-to-peer 2 前言     Type-V是一种新的TAG 技术，于2015年推出。Type-V提供了一种单一的通信模式，Type-V技术是基于RF技术的，符合ISO/IEC15693标准，可以和其他实现了ISO/IEC 15693规范的记忆性T">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/01/23/Service/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/05/29/Type-V/"/>
 
 
 
 
 
-  <title>Service | Welcome To My Blog</title>
+  <title>Type-V | Welcome To My Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/01/23/Service/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/05/29/Type-V/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Service</h1>
+          <h1 class="post-title" itemprop="name headline">Type-V</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-23T20:32:52+08:00">
-                2018-01-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-29T21:15:50+08:00">
+                2018-05-29
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
+                  <a href="/categories/NFC/" itemprop="url" rel="index">
+                    <span itemprop="name">NFC</span>
                   </a>
                 </span>
 
@@ -352,57 +352,38 @@
       
 
       
-        <h3><span id="1-概念">1 概念</span></h3>
-<p>    疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。</p>
-<a id="more"></a>
-<h3><span id="2-配置">2 配置</span></h3>
-<p>    开发Service组件也需要在AndroidManifest.xml中配置一下。</p>
-<pre><code>&lt;service android:name=&quot;.FirstService&quot;&gt;
-
-&lt;/service&gt;       //FirstService是使用者自己创建的继承自Service发挥作用的类。
-</code></pre>
-<h3><span id="3-内部方法">3 内部方法</span></h3>
-<pre><code>1. IBinder onBind（Intent intent）
-
-    //这是Service子类必须实现的方法。应用程序通过这个与Service组件通信。
-
-2. void onCreate（）
-
-   //该Service第一次被创建的时候调用它 二次就不会调用
-
-3. void onStartCommand（Intent intent,int flags,int startId）
-
-   // 每次客户端通过startService（Intent）启动该Service时候都会回调该函数。
-
-4. void onDestory()
-
-   // 销毁该Service
-
-5. boolean onUnbind(Intent intent)
-
-   // 当Service绑定的所有客户端都断开连接时候会回调该方法。
-</code></pre>
-<h3><span id="4-启动service">4 启动service</span></h3>
+        <h3><span id="1-名词解释">1 名词解释</span></h3>
+<p>NCI：NFC Controller Interface<br>
+<br>ACM：Active Communication Mode<br>
+<br>P2P：peer-to-peer</p>
+<h3><span id="2-前言">2 前言</span></h3>
+<p>    Type-V是一种新的TAG 技术，于2015年推出。Type-V提供了一种单一的通信模式，Type-V技术是基于RF技术的，符合ISO/IEC15693标准，可以和其他实现了ISO/IEC 15693规范的记忆性TAG很好的兼容。</p>
+<p>    Type-V是RF技术支持的第四种NFC规范，（前三种规范分别是Type A，Type B，Type F）。</p>
+<h3><span id="3-type-v经常使用的地方">3 Type-V经常使用的地方</span></h3>
+<h4><span id="31-library-books-products-and-packaging">3.1 Library books, products, and packaging</span></h4>
+<p>    图书馆中的图书一般都会含有ISO/IEC15693标签，这就意味着如果在TAG里有关于这本图书的信息，那么持有相关APP的NFC devices就会很方便的获取图书的相关信息，提升了图书管理的效率，也方便了读者的阅读。同样这种成本很低。一些商场或某些产品都会有ISO/IEC15693标签，所以它的使用范围很广。</p>
+<h4><span id="32-tickets">3.2 tickets</span></h4>
+<p>    在tickets上边添加ISO/IEC15693标签，TAG里可以添加用户信息，用户可以持有这种tickets进行入场或者旅行，并且这种TAG可以重复使用，只需要修改TAG里的信息即可。</p>
+<h4><span id="33-healthcare">3.3 Healthcare</span></h4>
+<p>    一些贴身的医疗设备也含有这种ISO/IEC15693TAG，我们可以使用NFC devices无需链接的随时接触设备从而获取我们身体的相关状况。</p>
+<h3><span id="4-nci-20特性">4 NCI 2.0特性</span></h3>
+<h4><span id="41-autonomous-tag-emulation">4.1 Autonomous tag emulation</span></h4>
+<p>    这个特性最大的亮点就是，在NFC devices并没有开机的情况下，仍然可以使用外部读卡器对手机内部模拟的TAG存储的信息进行读取。在之前的NFC 卡模拟中，我们实现卡模拟是通过跑在APP进程中的APP来实现的，如果想要使用这种功能，则必须保证NFC devices或者这个APP进程处于活跃状态，也就是开启状态，否则便不能使用这种功能。而使用Type V规范可以很好的解决这个问题，可以随时使用这种功能。</p>
+<h4><span id="42-rf-interface-extension">4.2 RF Interface Extension</span></h4>
+<p>    RF 扩展接口是NCI2.0 提出的一个新的概念，它可以优化并加速NFCC和APP进程之间的通信而不需要一个NFC devices。</p>
+<p>    这个概念有两个目的：</p>
 <ul>
-<li>
-<h5><span id="通过context的startservice启动">通过context的startService（）启动。</span></h5>
-<p>    访问者与Service没有关联，访问者退出不影响Service的继续运行。使用这个方法，自动调用onCreate、onStartCommand，如果同一个service多次启动，则只会调用一次onCreate。</p>
-</li>
-<li>
-<h5><span id="通过context的bindservice启动">通过context的bindService（）启动。</span></h5>
-<p>    访问者和Service有关联，访问者一旦退出，Service也就停止运行了。自动调用onCreate，onBind方法。</p>
-</li>
+<li>在NFCC和主进程之间，这种概念促进了PDUs的自主交换，持续保持了LLCP的链接而不需要额外的电源。</li>
+<li>激活了和NFC规范TAG进行通信的聚合模式，这样可以在一个单一的NCI信息中传输一批RF指令，在NFC Devices 和NFC 规范TAG进行通信过程中，它阻止了耗时任务在APP进程中的转变，从而提升了通信效率。</li>
 </ul>
-<h3><span id="5-停止service">5 停止service</span></h3>
+<h4><span id="43-ndef-rf-interface">4.3 NDEF RF interface</span></h4>
+<p>    新的NDEF RF接口使得整合NFC 规范技术到一个嵌入式设备变的更加容易，开发系统也变的更加简单。下层的硬件芯片为上层提供接口，上层不需要过多的关注下层，方便了开发者的开发与维护。</p>
+<h4><span id="44-llcp-v13">4.4 LLCP v1.3</span></h4>
+<p>    新技术使得我们可以为我们的个人或私有信息添加一个未经认证的安全元件选项，使得我们可以在每个设备之间传输我们的私有数据。</p>
+<h3><span id="参考文献">参考文献</span></h3>
 <ul>
-<li>
-<h5><span id="通过stopservice停止">通过stopService（）停止</span></h5>
-<p>    手动调用stopService()后，自动调用内部方法：onDestory()如果一个service被启动且被绑定，如果没有在绑定的前提下stopService()是无法停止服务的。</p>
-</li>
-<li>
-<h5><span id="通过unbindservice停止">通过unbindService（）停止</span></h5>
-<p>    手动调用unbindService()后，自动调用内部方法：onCreate()、onBind()、onDestory()。</p>
-</li>
+<li>“NFC-V Just Got Better – Here’s How”   Jürgen Böhler  15 Oct, 2015</li>
+<li>“NFC Forum adds support for Type V tags”   Sarah Clark  17 June 2015</li>
 </ul>
 
       
@@ -421,7 +402,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/service/" rel="tag"># service</a>
+            <a href="/tags/NFC-TypeV/" rel="tag"># NFC-TypeV</a>
           
         </div>
       
@@ -434,8 +415,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/10/Android系统中一些-注释的含义/" rel="next" title="Android系统中一些@注释的含义">
-                <i class="fa fa-chevron-left"></i> Android系统中一些@注释的含义
+              <a href="/2018/05/23/Activity/" rel="next" title="Activity">
+                <i class="fa fa-chevron-left"></i> Activity
               </a>
             
           </div>
@@ -443,10 +424,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/23/SuppressWarnings/" rel="prev" title="@SuppressWarnings">
-                @SuppressWarnings <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -594,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1 概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">2 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">3 内部方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">4 启动service</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.0.1.</span> <span class="nav-text">通过context的startService（）启动。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.0.2.</span> <span class="nav-text">通过context的bindService（）启动。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">5 停止service</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.1.</span> <span class="nav-text">通过stopService（）停止</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.2.</span> <span class="nav-text">通过unbindService（）停止</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1 名词解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">2 前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">3 Type-V经常使用的地方</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 Library books, products, and packaging</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 tickets</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Healthcare</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">4 NCI 2.0特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 Autonomous tag emulation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 RF Interface Extension</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 NDEF RF interface</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 LLCP v1.3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
