@@ -86,13 +86,6 @@
     </url>
 
     <url>
-        <loc>http://milkdz.cn/tags/service/</loc>
-        <lastmod>2018-05-23T12:37:45.749Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://milkdz.cn/tags/Android%E6%9E%B6%E6%9E%84/</loc>
         <lastmod>2018-05-23T12:53:12.512Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -172,6 +165,27 @@
     <url>
         <loc>http://milkdz.cn/tags/NFC-TypeV/</loc>
         <lastmod>2018-05-30T08:29:58.056Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/service/</loc>
+        <lastmod>2018-05-30T09:40:47.155Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/service%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
+        <lastmod>2018-05-30T09:40:47.155Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
+        <lastmod>2018-05-30T09:40:47.155Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
