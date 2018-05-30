@@ -351,43 +351,17 @@
 
       
         
-          
-            <h3><span id="1-名词解释">1 名词解释</span></h3>
+          <h3>1 名词解释</h3>
 <p>NCI：NFC Controller Interface<br>
 <br>ACM：Active Communication Mode<br>
-<br>P2P：peer-to-peer<br>
-&lt;-- more --&gt;</p>
-<h3><span id="2-前言">2 前言</span></h3>
-<p>    Type-V是一种新的TAG 技术，于2015年推出。Type-V提供了一种单一的通信模式，Type-V技术是基于RF技术的，符合ISO/IEC15693标准，可以和其他实现了ISO/IEC 15693规范的记忆性TAG很好的兼容。</p>
-<p>    Type-V是RF技术支持的第四种NFC规范，（前三种规范分别是Type A，Type B，Type F）。</p>
-<h3><span id="3-type-v经常使用的地方">3 Type-V经常使用的地方</span></h3>
-<h4><span id="31-library-books-products-and-packaging">3.1 Library books, products, and packaging</span></h4>
-<p>    图书馆中的图书一般都会含有ISO/IEC15693标签，这就意味着如果在TAG里有关于这本图书的信息，那么持有相关APP的NFC devices就会很方便的获取图书的相关信息，提升了图书管理的效率，也方便了读者的阅读。同样这种成本很低。一些商场或某些产品都会有ISO/IEC15693标签，所以它的使用范围很广。</p>
-<h4><span id="32-tickets">3.2 tickets</span></h4>
-<p>    在tickets上边添加ISO/IEC15693标签，TAG里可以添加用户信息，用户可以持有这种tickets进行入场或者旅行，并且这种TAG可以重复使用，只需要修改TAG里的信息即可。</p>
-<h4><span id="33-healthcare">3.3 Healthcare</span></h4>
-<p>    一些贴身的医疗设备也含有这种ISO/IEC15693TAG，我们可以使用NFC devices无需链接的随时接触设备从而获取我们身体的相关状况。</p>
-<h3><span id="4-nci-20特性">4 NCI 2.0特性</span></h3>
-<h4><span id="41-autonomous-tag-emulation">4.1 Autonomous tag emulation</span></h4>
-<p>    这个特性最大的亮点就是，在NFC devices并没有开机的情况下，仍然可以使用外部读卡器对手机内部模拟的TAG存储的信息进行读取。在之前的NFC 卡模拟中，我们实现卡模拟是通过跑在APP进程中的APP来实现的，如果想要使用这种功能，则必须保证NFC devices或者这个APP进程处于活跃状态，也就是开启状态，否则便不能使用这种功能。而使用Type V规范可以很好的解决这个问题，可以随时使用这种功能。</p>
-<h4><span id="42-rf-interface-extension">4.2 RF Interface Extension</span></h4>
-<p>    RF 扩展接口是NCI2.0 提出的一个新的概念，它可以优化并加速NFCC和APP进程之间的通信而不需要一个NFC devices。</p>
-<p>    这个概念有两个目的：</p>
-<ul>
-<li>在NFCC和主进程之间，这种概念促进了PDUs的自主交换，持续保持了LLCP的链接而不需要额外的电源。</li>
-<li>激活了和NFC规范TAG进行通信的聚合模式，这样可以在一个单一的NCI信息中传输一批RF指令，在NFC Devices 和NFC 规范TAG进行通信过程中，它阻止了耗时任务在APP进程中的转变，从而提升了通信效率。</li>
-</ul>
-<h4><span id="43-ndef-rf-interface">4.3 NDEF RF interface</span></h4>
-<p>    新的NDEF RF接口使得整合NFC 规范技术到一个嵌入式设备变的更加容易，开发系统也变的更加简单。下层的硬件芯片为上层提供接口，上层不需要过多的关注下层，方便了开发者的开发与维护。</p>
-<h4><span id="44-llcp-v13">4.4 LLCP v1.3</span></h4>
-<p>    新技术使得我们可以为我们的个人或私有信息添加一个未经认证的安全元件选项，使得我们可以在每个设备之间传输我们的私有数据。</p>
-<h3><span id="参考文献">参考文献</span></h3>
-<ul>
-<li>“NFC-V Just Got Better – Here’s How”   Jürgen Böhler  15 Oct, 2015</li>
-<li>“NFC Forum adds support for Type V tags”   Sarah Clark  17 June 2015</li>
-</ul>
-
-          
+<br>P2P：peer-to-peer</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/29/Type-V/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
