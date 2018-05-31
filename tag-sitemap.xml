@@ -191,22 +191,50 @@
     </url>
 
     <url>
+        <loc>http://milkdz.cn/tags/%E9%9B%86%E5%90%88/</loc>
+        <lastmod>2018-05-30T11:06:11.096Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://milkdz.cn/tags/ArrayList/</loc>
-        <lastmod>2018-05-30T11:03:22.270Z</lastmod>
+        <lastmod>2018-05-30T11:06:11.096Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://milkdz.cn/tags/Vector/</loc>
-        <lastmod>2018-05-30T11:03:22.270Z</lastmod>
+        <lastmod>2018-05-30T11:06:11.096Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://milkdz.cn/tags/LinkedList/</loc>
-        <lastmod>2018-05-30T11:03:22.270Z</lastmod>
+        <lastmod>2018-05-30T11:06:11.096Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/HashMap/</loc>
+        <lastmod>2018-05-31T01:01:50.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/HashTable/</loc>
+        <lastmod>2018-05-31T01:01:50.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/TreeMap/</loc>
+        <lastmod>2018-05-31T01:01:50.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

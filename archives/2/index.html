@@ -559,6 +559,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/03/07/Map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/07/Map/" itemprop="url">Map</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-07T08:57:32+08:00">
+                2018-03-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/集合/" itemprop="url" rel="index">
+                    <span itemprop="name">集合</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3><span id="map">Map</span></h3>
+<p>    Map分为HashMap，HashTable,TreeMap，LinkedHashMap和WeakHashMap。Java中为Map定义了一个接口java.util.Map，其下有两个实现类，HashMap和TreeMap。Map中存储的是键值对，索引为key,值为Value。</p>
+<h3><span id="hashmap和hashtable">HashMap和HashTable</span></h3>
+<p>    HashMap根据键的HashCode值存储数据，具有很快的访问速度。HashTable和Hashmap一样都采用了hash法进行索引。</p>
+<h6><span id="相同点">    相同点：</span></h6>
+<ul>
+<li>采用hash法进行索引</li>
+<li>采用的hash/rehash算法几乎一样，性能没有很大差异，几乎一样</li>
+</ul>
+<h6><span id="不同点">    不同点：</span></h6>
+<ul>
+<li>HashMap允许key为null，但最多只允许一个key为null，但是hashTable不允许。</li>
+<li>HashTable具有contains方法，HashMap使用方法containsvalue和containsKey代替了contains方法。</li>
+<li>HashTable继承自Dictionary，HashMap实现了Map接口。</li>
+<li>HashTable方法是线程安全的，HashMap不支持线程的同步，所以不安全。</li>
+<li>HashTable使用Enumeration进行枚举，HashMap使用Iterator进行枚举。</li>
+</ul>
+<h3><span id="treemap">TreeMap</span></h3>
+<p>    TreeMap实现了SortMap，可以把它保存的记录根据键排序，如果需要按照一定的顺序遍历Map，那么可以使用TreeMap</p>
+<h3><span id="linkedhashmap">LinkedHashMap</span></h3>
+<p>    LinkedHashMap继承自HashMap，可以使得输出的顺序和输入的顺序相同，可以按照读取顺序来进行排列。</p>
+<h3><span id="weakhashmap">WeakHashMap</span></h3>
+<p>    WeakHashMap中的key采用的是弱引用的方式，只要它不再被外部引用，他就可以被垃圾回收器回收。当HashMap中的key没有被外部引用时，只有这个key从HashMap中删除后，才可以被垃圾回收器回收。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/03/06/List/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -613,8 +788,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/集合/" itemprop="url" rel="index">
-                    <span itemprop="name">集合</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -653,7 +828,7 @@
         
           <h3>List集合</h3>
 <p>    List集合有ArrayList，Vector，LinkedList。这三个类都在java.util包中。</p>
-<h4>ArrayList和Vector</h4>
+<h3>ArrayList和Vector</h3>
 <p>    他们会在内存中开辟一块连续的空间来存储，存储的数据是连续的，所以它们支持使用序号即下标来访问元素，同时索引数据的速度比较快。但是由于插入数据需要移动其他数据，所以插入数据比较慢。ArrayList和Vector都有一个初始化的空间容量大小，当超过这个大小的时候，就会动态的扩充他们的存储空间。</p>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1575,162 +1750,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2017/11/19/Ubuntu下安装jdk/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="MilkDZ">
-      <meta itemprop="description" content="true">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome To My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/19/Ubuntu下安装jdk/" itemprop="url">Ubuntu下安装jdk</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-19T10:20:20+08:00">
-                2017-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JDK/" itemprop="url" rel="index">
-                    <span itemprop="name">JDK</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2>install jdk1.8 for ubuntu14.04</h2>
-<pre><code>1. Open terminal from the Dash or by pressing Ctrl+Alt+T.
-When it opens, run the command below to add PPA:
-
-sudo add-apt-repository ppa:openjdk-r/ppa
-
-
-OpenJDK 8 PPA
-
-Type in user password when it asks and hit Enter to continue.
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/19/Ubuntu下安装jdk/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1781,7 +1800,7 @@ Type in user password when it asks and hit Enter to continue.
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1792,7 +1811,7 @@ Type in user password when it asks and hit Enter to continue.
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1803,7 +1822,7 @@ Type in user password when it asks and hit Enter to continue.
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
