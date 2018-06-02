@@ -351,16 +351,20 @@
 
       
         
-          
-            <h3><span id="特性">特性</span></h3>
+          <h3>特性</h3>
 <ul>
 <li>CopyOnWriteArrayList是线程安全的，ArrayList线程不安全。</li>
 <li>CopyOnWriteArrayList中所有的更改操作都是对底层数组进行一次新的复制来实现的。</li>
 <li>CopyOnWriteArrayList只能保证最终数据的一致性，并不能保证数据实时一致性，所以如果我们立即写入或修改的数据，可能不会立即生效。</li>
 <li>CopyOnWriteArrayList再进行写的操作的时候，会同时存在两个对象，旧的和新的，所以内存占用会比较大。</li>
 </ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/02/CopyOnWriteArrayList/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
