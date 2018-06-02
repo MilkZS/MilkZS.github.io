@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ADB," />
+  <meta name="keywords" content="hashCode,equals," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
-<meta name="keywords" content="ADB">
+<meta name="description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。 equals方法     重写的equals方法是对对象进行比较的，在重写equals方法中，我">
+<meta name="keywords" content="hashCode,equals">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ADB的使用">
-<meta property="og:url" content="http://milkdz.cn/2018/05/12/ADB的使用/index.html">
+<meta property="og:title" content="hashCode和equals">
+<meta property="og:url" content="http://milkdz.cn/2018/06/02/hashCode和equals/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
+<meta property="og:description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。 equals方法     重写的equals方法是对对象进行比较的，在重写equals方法中，我">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-31T02:43:07.532Z">
+<meta property="og:updated_time" content="2018-06-02T02:49:34.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ADB的使用">
-<meta name="twitter:description" content="参数列表   -s    设置输出日志的标签，只显示该标签的日志   -f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功   -r    按照每千字节输出日志   -n    设置日志输出的最大数目 需要-r参数   -v    设置日志的输出格式，只能设置一项   -c    清空所有的日志缓冲信息">
+<meta name="twitter:title" content="hashCode和equals">
+<meta name="twitter:description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。 equals方法     重写的equals方法是对对象进行比较的，在重写equals方法中，我">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/05/12/ADB的使用/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/06/02/hashCode和equals/"/>
 
 
 
 
 
-  <title>ADB的使用 | Welcome To My Blog</title>
+  <title>hashCode和equals | Welcome To My Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/05/12/ADB的使用/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/06/02/hashCode和equals/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ADB的使用</h1>
+          <h1 class="post-title" itemprop="name headline">hashCode和equals</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-12T10:10:39+08:00">
-                2018-05-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T10:41:42+08:00">
+                2018-06-02
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/Java基础/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
                   </a>
                 </span>
 
@@ -352,76 +352,24 @@
       
 
       
-        <h3><span id="参数列表">参数列表</span></h3>
+        <h3><span id="简介">简介</span></h3>
+<p>    HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。</p>
+<p>    java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。</p>
+<h3><span id="equals方法">equals方法</span></h3>
+<p>    重写的equals方法是对对象进行比较的，在重写equals方法中，我们通过“==”来比较对象中的内容，可以指定某些内容相等，那么这两个对象就一样(地址并不一样)，即返回true;</p>
+<p>    重写equals方法，如果内容相等，那么对象就一样。</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> code;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">setCode</span><span class="params">(<span class="keyword">int</span> code)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.code = code;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.code;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object arg0)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(!(arg0 <span class="keyword">instanceof</span> Hashequals)) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	Hashequals a = (Hashequals)arg0;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.code == a.getCode()) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Hashequals a1 = <span class="keyword">new</span> Hashequals(<span class="number">1</span>);</span><br><span class="line">	Hashequals a2 = <span class="keyword">new</span> Hashequals(<span class="number">1</span>);</span><br><span class="line">	System.err.print(a1.equals(a2));        <span class="comment">//true</span></span><br><span class="line">	</span><br><span class="line">	a2.setCode(<span class="number">2</span>);</span><br><span class="line">	System.err.print(a1.getCode());         <span class="comment">//1</span></span><br><span class="line">	System.err.print(a2.getCode());         <span class="comment">//2</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="hashcode">hashCode</span></h3>
+<p>    hashCode方法也是对两个对象进行是否相等比较的。父类object中的hashCode方法返回对象在内存中地址转换成的int值，如果没有重写这个方法，那么每个对象的hash int值都是不一样的。</p>
+<h3><span id="equals和hashcode的关系">equals和hashCode的关系</span></h3>
 <ul>
-<li>
-<p>-s    设置输出日志的标签，只显示该标签的日志</p>
-</li>
-<li>
-<p>-f    将日志输出到文件，默认输出到标准输出流中，-f参数执行不成功</p>
-</li>
-<li>
-<p>-r    按照每千字节输出日志</p>
-</li>
-<li>
-<p>-n    设置日志输出的最大数目 需要-r参数</p>
-</li>
-<li>
-<p>-v    设置日志的输出格式，只能设置一项</p>
-</li>
-<li>
-<p>-c    清空所有的日志缓冲信息</p>
-</li>
+<li>如果两个对象x.equals(y)的equals返回true，那么两个对象的hashCode产生的int值必须相等。</li>
+<li>如果两个对象x.equals(y)的equals返回false，那么两个对象的hashCode是可能相等的，也是可能不相等的。</li>
+<li>如果两个对象的hashCode不相等，那么一定可知equals返回为false。</li>
+<li>如果两个对象的hashCode相等，那么equals返回可能是true，可能是false。</li>
 </ul>
-<a id="more"></a>
-<ul>
-<li>
-<p>-d    将缓冲的日志输出到屏幕上</p>
-</li>
-<li>
-<p>-t    输出最近的几行日志，输出完退出，不会阻塞</p>
-</li>
-<li>
-<p>-g    查看日志缓冲区信息</p>
-</li>
-<li>
-<p>-b    加载一个日志缓冲区</p>
-</li>
-<li>
-<p>-B    以二进制形式输出日志</p>
-</li>
-</ul>
-<h3><span id="命令的使用">命令的使用</span></h3>
-<h5><span id="1-adb-devices">1. adb devices</span></h5>
-<p>    指令 adb devices 查看手机是否链接上adb</p>
-<h5><span id="2-adb-logcat">2. adb logcat</span></h5>
-<p>    指令 adb logcat &gt; XXX.txt 输出log并将其写入XXX文件中，注意过程中一直在输出log,<br>
-需要使用Ctrl+C来停止。</p>
-<h5><span id="3-adb-logcat-s">3. adb logcat -s</span></h5>
-<p>    输出指定标签的内容,例：<br>
-adb logcat -s System.out<br>
-输出指定标签“System.out”的信息</p>
-<h5><span id="4-adb-logcat-f">4. adb logcat -f</span></h5>
-<p>    输出日志信息到手机文件,adb logcat -f /sdcard/log.txt</p>
-<h5><span id="5-adb-logcat-v">5. adb logcat -v</span></h5>
-<p>    查看日志输出的相关信息。<br>
-<br>    查看日志的输出时间  adb logcat -v time<br>
-<br>    查看日志的输出时间和线程信息   adb logcat -v threadtime</p>
-<h5><span id="6-adb-shell">6. adb shell</span></h5>
-<p>    进入手机系统shell操作,使用adb shell可以在电脑终端上进入手机系统目录中，对手机进行相对应的操作。</p>
-<h5><span id="7-使用adb截图">7. 使用adb截图</span></h5>
-<p>    adb shell /sysytem/bin/screencap -p  /sdcard/screen.png</p>
-<h5><span id="8-adb-install-r">8. adb install -r</span></h5>
-<p>    向手机中安装软件，即apk文件在控制台中，使用指令adb  install -r xx.apk</p>
-<h5><span id="9-adb-push">9. adb push</span></h5>
-<p>    往手机中传入文件,adb push  xxx   /sdcard/</p>
-<h5><span id="10-adb-pull">10. adb pull</span></h5>
-<p>    从手机中拿取文件,adb pull  /sdcard/xxxx</p>
-<h5><span id="11-使用adb卸载软件">11. 使用adb卸载软件</span></h5>
-<p>    adb remount<br><br>
-    adb shell<br><br>
-    cd  目标目录<br><br>
-    rm xxx.apk</p>
+<h3><span id="一些题">一些题</span></h3>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">      <span class="keyword">String</span> s = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">String</span> t = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span>[] c = &#123;<span class="string">'h'</span>,<span class="string">'e'</span>,<span class="string">'l'</span>,<span class="string">'l'</span>,<span class="string">'o'</span>&#125;;</span><br><span class="line"></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(t));        <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(c));        <span class="comment">//false</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s == t);             <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(<span class="keyword">new</span> <span class="keyword">String</span>(<span class="string">"hello"</span>)));              <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">String</span> s1 = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">String</span> s2 = <span class="string">"ab"</span> + <span class="string">"c"</span>;</span><br><span class="line">System.err.<span class="built_in">println</span>(s1 == s2);           <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s1.equals(s2));      <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -439,7 +387,9 @@ adb logcat -s System.out<br>
       
         <div class="post-tags">
           
-            <a href="/tags/ADB/" rel="tag"># ADB</a>
+            <a href="/tags/hashCode/" rel="tag"># hashCode</a>
+          
+            <a href="/tags/equals/" rel="tag"># equals</a>
           
         </div>
       
@@ -452,8 +402,8 @@ adb logcat -s System.out<br>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/05/git-patch/" rel="next" title="git patch">
-                <i class="fa fa-chevron-left"></i> git patch
+              <a href="/2018/06/02/CopyOnWriteArrayList/" rel="next" title="CopyOnWriteArrayList">
+                <i class="fa fa-chevron-left"></i> CopyOnWriteArrayList
               </a>
             
           </div>
@@ -461,10 +411,6 @@ adb logcat -s System.out<br>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/19/线程和进程/" rel="prev" title="线程和进程">
-                线程和进程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -612,7 +558,7 @@ adb logcat -s System.out<br>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">参数列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">命令的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. adb devices</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. adb logcat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. adb logcat -s</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.4.</span> <span class="nav-text">4. adb logcat -f</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.5.</span> <span class="nav-text">5. adb logcat -v</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.6.</span> <span class="nav-text">6. adb shell</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.7.</span> <span class="nav-text">7. 使用adb截图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.8.</span> <span class="nav-text">8. adb install -r</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.9.</span> <span class="nav-text">9. adb push</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.10.</span> <span class="nav-text">10. adb pull</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.0.11.</span> <span class="nav-text">11. 使用adb卸载软件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">equals方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">hashCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">equals和hashCode的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">一些题</span></a></li></ol></div>
             
 
           </div>
