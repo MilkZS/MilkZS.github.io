@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android,NFC,NDEF," />
+  <meta name="keywords" content="CopyOnWriteArrayList," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。">
-<meta name="keywords" content="Android,NFC,NDEF">
+<meta name="description" content="特性  CopyOnWriteArrayList是线程安全的，ArrayList线程不安全。 CopyOnWriteArrayList中所有的更改操作都是对底层数组进行一次新的复制来实现的。 CopyOnWriteArrayList只能保证最终数据的一致性，并不能保证数据实时一致性，所以如果我们立即写入或修改的数据，可能不会立即生效。 CopyOnWriteArrayList再进行写的操作的时候，">
+<meta name="keywords" content="CopyOnWriteArrayList">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Skip NDEF">
-<meta property="og:url" content="http://milkdz.cn/2018/04/02/Skip-NDEF/index.html">
+<meta property="og:title" content="CopyOnWriteArrayList">
+<meta property="og:url" content="http://milkdz.cn/2018/06/02/CopyOnWriteArrayList/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。">
+<meta property="og:description" content="特性  CopyOnWriteArrayList是线程安全的，ArrayList线程不安全。 CopyOnWriteArrayList中所有的更改操作都是对底层数组进行一次新的复制来实现的。 CopyOnWriteArrayList只能保证最终数据的一致性，并不能保证数据实时一致性，所以如果我们立即写入或修改的数据，可能不会立即生效。 CopyOnWriteArrayList再进行写的操作的时候，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-16T14:08:40.245Z">
+<meta property="og:updated_time" content="2018-06-02T01:17:19.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Skip NDEF">
-<meta name="twitter:description" content="关于SKIP NDEF 前言     最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。">
+<meta name="twitter:title" content="CopyOnWriteArrayList">
+<meta name="twitter:description" content="特性  CopyOnWriteArrayList是线程安全的，ArrayList线程不安全。 CopyOnWriteArrayList中所有的更改操作都是对底层数组进行一次新的复制来实现的。 CopyOnWriteArrayList只能保证最终数据的一致性，并不能保证数据实时一致性，所以如果我们立即写入或修改的数据，可能不会立即生效。 CopyOnWriteArrayList再进行写的操作的时候，">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/04/02/Skip-NDEF/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/06/02/CopyOnWriteArrayList/"/>
 
 
 
 
 
-  <title>Skip NDEF | Welcome To My Blog</title>
+  <title>CopyOnWriteArrayList | Welcome To My Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/02/Skip-NDEF/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/06/02/CopyOnWriteArrayList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Skip NDEF</h1>
+          <h1 class="post-title" itemprop="name headline">CopyOnWriteArrayList</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T22:27:19+08:00">
-                2018-04-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T09:16:28+08:00">
+                2018-06-02
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NFC/" itemprop="url" rel="index">
-                    <span itemprop="name">NFC</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -352,26 +352,13 @@
       
 
       
-        <h2><span id="关于skip-ndef">关于SKIP NDEF</span></h2>
-<h3><span id="前言">前言</span></h3>
-<p>    最近遇到了一个测试需要skip ndef，对于这个词感到很陌生。找来找去才发现在NfcAdpater中一个静态变量FLAG_READER_SKIP_NDEF_CHECK。里边有关键词skip ndef，同时根据Google对这个变量的解释也可以了解到这个也就是我们所说的skip ndef，那么它到底是做什么的呢？我们来细细分析。</p>
-<a id="more"></a>
-<h3><span id="含义">含义</span></h3>
-<p>    先来看下代码中对这个变量的定义的注释。</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line">  </span><br><span class="line"> * Flag for use with &#123;@link <span class="comment">#enableReaderMode(Activity, ReaderCallback, int, Bundle)&#125;.</span></span><br><span class="line">  </span><br><span class="line"> * &lt;p&gt;</span><br><span class="line">  </span><br><span class="line"> * Setting this flag allows the caller to prevent the</span><br><span class="line">  </span><br><span class="line"> * platform from performing an NDEF<span class="built_in"> check </span>on the tags it</span><br><span class="line">  </span><br><span class="line"> * finds.</span><br><span class="line">  </span><br><span class="line"> */</span><br><span class="line"> </span><br><span class="line"><span class="keyword"> public</span><span class="keyword"> static</span><span class="keyword"> final</span><span class="built_in"> int </span>F<span class="class">LAG_READER_SKIP_NDEF_CHECK = 0x80;</span></span><br></pre></td></tr></table></figure>
-<p>    Google对这个变量的解释的意思是，这是个flag，它阻止了平台对NDEF信息的tag检查。其实也就是阻止TAG分发系统对这个NDEF信息进行检查分配。我们知道Android beam是两个devices之间的信息交互，此时两个devices都会获得NDEF TAG信息，但有的时候我们只想获取这个信息却不执行相对应的activity，那么这个时候，我们就需要使用这个变量了。</p>
-<p>    我们需要用变量FLAG_READER_SKIP_NDEF_CHECK来做标记，在我们只需要读取NDEF信息但不执行相对应的activity时，会使用这个变量来告诉TAG分发系统，我们仅仅想要读取一些NDEF信息，不要检查NDEF信息，不要调用beam。</p>
-<h3><span id="skip-流程">skip 流程</span></h3>
+        <h3><span id="特性">特性</span></h3>
 <ul>
-<li>NfcService</li>
+<li>CopyOnWriteArrayList是线程安全的，ArrayList线程不安全。</li>
+<li>CopyOnWriteArrayList中所有的更改操作都是对底层数组进行一次新的复制来实现的。</li>
+<li>CopyOnWriteArrayList只能保证最终数据的一致性，并不能保证数据实时一致性，所以如果我们立即写入或修改的数据，可能不会立即生效。</li>
+<li>CopyOnWriteArrayList再进行写的操作的时候，会同时存在两个对象，旧的和新的，所以内存占用会比较大。</li>
 </ul>
-<p>    在NFCServiceHandler中，对接收到的NDEF进行处理的时候，当分析到信息是NDEF_TAG的时候，会对信息的flag作对比，确认是否包含变量FLAG_READER_SKIP_NDEF_CHECK，如果包含那么会跳过NDEF的检测。</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">case</span> MSG_NDEF_TAG:</span><br><span class="line">    </span><br><span class="line"><span class="params">...</span> <span class="params">...</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (readerParams != <span class="built_in">null</span>) &#123;</span><br><span class="line">        </span><br><span class="line">    presenceCheckDelay = readerParams.presenceCheckDelay;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> ((readerParams.flags &amp; NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK) != <span class="number">0</span>) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (DBG) <span class="keyword">Log</span>.d(<span class="built_in">TAG</span>, <span class="string">"Skipping NDEF detection in reader mode"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="built_in">tag</span>.startPresenceChecking(presenceCheckDelay, callback);</span><br><span class="line"></span><br><span class="line">            dispatchTagEndpoint(<span class="built_in">tag</span>, readerParams);</span><br><span class="line"></span><br><span class="line">            break;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="params">...</span> <span class="params">...</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>CardReaderFragment</li>
-</ul>
-<p>    这是一个读卡器APP，用来读取传过来的NDEF数据，此时需要告诉对这个NDEF信息处理的handler，我们不需要激活相对应的activity，我们只想读取信息，所以我们需要设置一个flag来使得程序可以跳过NDEF检测。</p>
-  <figure class="highlight mizar"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// Recommend NfcAdapter flags <span class="keyword">for</span> reading <span class="keyword">from</span> other Android devices. Indicates <span class="keyword">that</span> this</span><br><span class="line"></span><br><span class="line">// activity <span class="keyword">is</span> interested <span class="keyword">in</span> NFC-A devices (including other Android devices), <span class="keyword">and</span> <span class="keyword">that</span> the</span><br><span class="line"></span><br><span class="line">// system should <span class="keyword">not</span> check <span class="keyword">for</span> the presence <span class="keyword">of</span> NDEF-formatted data (e.g. Android Beam).</span><br><span class="line"></span><br><span class="line">public static int READER_FLAGS =</span><br><span class="line"></span><br><span class="line">        NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,11 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
-          
-            <a href="/tags/NFC/" rel="tag"># NFC</a>
-          
-            <a href="/tags/NDEF/" rel="tag"># NDEF</a>
+            <a href="/tags/CopyOnWriteArrayList/" rel="tag"># CopyOnWriteArrayList</a>
           
         </div>
       
@@ -406,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/01/开启Android源码中GPS相关的log/" rel="next" title="开启Android源码中GPS相关的log">
-                <i class="fa fa-chevron-left"></i> 开启Android源码中GPS相关的log
+              <a href="/2018/05/29/Type-V/" rel="next" title="Type-V">
+                <i class="fa fa-chevron-left"></i> Type-V
               </a>
             
           </div>
@@ -415,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/16/NFC基础知识/" rel="prev" title="NFC基础知识">
-                NFC基础知识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">关于SKIP NDEF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">skip 流程</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">特性</span></a></li></ol></div>
             
 
           </div>
