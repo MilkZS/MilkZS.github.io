@@ -259,6 +259,147 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/06/03/缩放图片/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MilkDZ">
+      <meta itemprop="description" content="true">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome To My Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/03/缩放图片/" itemprop="url">缩放图片</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-03T18:22:02+08:00">
+                2018-06-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Methods/" itemprop="url" rel="index">
+                    <span itemprop="name">Methods</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Bitmap zoomImg(Bitmap bm, <span class="built_in">int</span> newWidth ,<span class="built_in">int</span> newHeight)&#123;</span><br><span class="line">         <span class="comment">// 获得图片的宽高</span></span><br><span class="line">         <span class="built_in">int</span> <span class="built_in">width</span> = bm.getWidth();</span><br><span class="line">         <span class="built_in">int</span> <span class="built_in">height</span> = bm.getHeight();</span><br><span class="line">         <span class="comment">// 计算缩放比例</span></span><br><span class="line">         <span class="built_in">float</span> scaleWidth = ((<span class="built_in">float</span>) newWidth) / <span class="built_in">width</span>;</span><br><span class="line">         <span class="built_in">float</span> scaleHeight = ((<span class="built_in">float</span>) newHeight) / <span class="built_in">height</span>;</span><br><span class="line">         <span class="comment">// 取得想要缩放的matrix参数</span></span><br><span class="line">         Matrix matrix = <span class="keyword">new</span> Matrix();</span><br><span class="line">         matrix.postScale(scaleWidth, scaleHeight);</span><br><span class="line">         <span class="comment">// 得到新的图片</span></span><br><span class="line">         Bitmap newbm = Bitmap.createBitmap(bm, <span class="number">0</span>, <span class="number">0</span>, <span class="built_in">width</span>, <span class="built_in">height</span>, matrix, <span class="keyword">true</span>);</span><br><span class="line">          <span class="keyword">return</span> newbm;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/06/02/hashCode和equals/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -351,27 +492,16 @@
 
       
         
-          
-            <h3><span id="简介">简介</span></h3>
+          <h3>简介</h3>
 <p>    HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。</p>
 <p>    java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。</p>
-<h3><span id="equals方法">equals方法</span></h3>
-<p>    重写的equals方法是对对象进行比较的，在重写equals方法中，我们通过“==”来比较对象中的内容，可以指定某些内容相等，那么这两个对象就一样(地址并不一样)，即返回true;</p>
-<p>    重写equals方法，如果内容相等，那么对象就一样。</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> code;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">setCode</span><span class="params">(<span class="keyword">int</span> code)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.code = code;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>.code;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object arg0)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(!(arg0 <span class="keyword">instanceof</span> Hashequals)) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	Hashequals a = (Hashequals)arg0;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.code == a.getCode()) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Hashequals a1 = <span class="keyword">new</span> Hashequals(<span class="number">1</span>);</span><br><span class="line">	Hashequals a2 = <span class="keyword">new</span> Hashequals(<span class="number">1</span>);</span><br><span class="line">	System.err.print(a1.equals(a2));        <span class="comment">//true</span></span><br><span class="line">	</span><br><span class="line">	a2.setCode(<span class="number">2</span>);</span><br><span class="line">	System.err.print(a1.getCode());         <span class="comment">//1</span></span><br><span class="line">	System.err.print(a2.getCode());         <span class="comment">//2</span></span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3><span id="hashcode">hashCode</span></h3>
-<p>    hashCode方法也是对两个对象进行是否相等比较的。父类object中的hashCode方法返回对象在内存中地址转换成的int值，如果没有重写这个方法，那么每个对象的hash int值都是不一样的。</p>
-<h3><span id="equals和hashcode的关系">equals和hashCode的关系</span></h3>
-<ul>
-<li>如果两个对象x.equals(y)的equals返回true，那么两个对象的hashCode产生的int值必须相等。</li>
-<li>如果两个对象x.equals(y)的equals返回false，那么两个对象的hashCode是可能相等的，也是可能不相等的。</li>
-<li>如果两个对象的hashCode不相等，那么一定可知equals返回为false。</li>
-<li>如果两个对象的hashCode相等，那么equals返回可能是true，可能是false。</li>
-</ul>
-<h3><span id="一些题">一些题</span></h3>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">      <span class="keyword">String</span> s = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">String</span> t = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span>[] c = &#123;<span class="string">'h'</span>,<span class="string">'e'</span>,<span class="string">'l'</span>,<span class="string">'l'</span>,<span class="string">'o'</span>&#125;;</span><br><span class="line"></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(t));        <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(c));        <span class="comment">//false</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s == t);             <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(<span class="keyword">new</span> <span class="keyword">String</span>(<span class="string">"hello"</span>)));              <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">String</span> s1 = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">String</span> s2 = <span class="string">"ab"</span> + <span class="string">"c"</span>;</span><br><span class="line">System.err.<span class="built_in">println</span>(s1 == s2);           <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s1.equals(s2));      <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/02/hashCode和equals/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1625,163 +1755,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/04/16/NFC基础知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="MilkDZ">
-      <meta itemprop="description" content="true">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Welcome To My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/16/NFC基础知识/" itemprop="url">NFC基础知识</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T22:08:57+08:00">
-                2018-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NFC/" itemprop="url" rel="index">
-                    <span itemprop="name">NFC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2>NFC基础知识</h2>
-<h3>1. NFC的运行模式</h3>
-<h4>1.1 NFC包含三种主要的运行模式</h4>
-<ul>
-<li>
-<p>R/W模式</p>
-<p>    该模式交互是单向的。工作模式是具有NFC功能的设备（NFC Device）和NFC TAG之间进行的交互。但是只能由NFC向NFC TAG进行读取和写入操作，例如通过具有NFC功能的手机向北京公交地铁卡充值一样，只能由手机对卡进行查看余额，或者用手机对卡进行充值，但是不能由卡对手机进行读写操作。</p>
-<p>    NFC TAG有四种类型，由不同的厂家推出。对应的四种芯片名分别是Topaz（ISO 14443<br>
-Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（ISO<br>
-14443 TypeA TypeB）。</p>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/16/NFC基础知识/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1832,7 +1805,7 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1843,7 +1816,7 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1854,7 +1827,7 @@ Type A）、MIFARE（ISO14443 TypeA）、FeliCa（FeliCa）、MIFARE-DESFire（I
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

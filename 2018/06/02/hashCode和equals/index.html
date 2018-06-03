@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。 equals方法     重写的equals方法是对对象进行比较的，在重写equals方法中，我">
+<meta name="description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。">
 <meta name="keywords" content="hashCode,equals">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hashCode和equals">
 <meta property="og:url" content="http://milkdz.cn/2018/06/02/hashCode和equals/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。 equals方法     重写的equals方法是对对象进行比较的，在重写equals方法中，我">
+<meta property="og:description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-02T02:49:34.062Z">
+<meta property="og:updated_time" content="2018-06-02T02:55:49.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hashCode和equals">
-<meta name="twitter:description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。 equals方法     重写的equals方法是对对象进行比较的，在重写equals方法中，我">
+<meta name="twitter:description" content="简介     HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。     java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。">
 
 
 
@@ -355,6 +355,7 @@
         <h3><span id="简介">简介</span></h3>
 <p>    HashCode和equals时面试笔试中经常会遇到的两个方法，理解了这两个方法，对于日常的代码编写也有着非常大的帮助。</p>
 <p>    java中的每一个对象都可以重写equal方法和hashcode方法，equals时object类提供的方法，而hashcode是从object类继承过来的。</p>
+<a id="more"></a>
 <h3><span id="equals方法">equals方法</span></h3>
 <p>    重写的equals方法是对对象进行比较的，在重写equals方法中，我们通过“==”来比较对象中的内容，可以指定某些内容相等，那么这两个对象就一样(地址并不一样)，即返回true;</p>
 <p>    重写equals方法，如果内容相等，那么对象就一样。</p>
@@ -368,7 +369,7 @@
 <li>如果两个对象的hashCode不相等，那么一定可知equals返回为false。</li>
 <li>如果两个对象的hashCode相等，那么equals返回可能是true，可能是false。</li>
 </ul>
-<h3><span id="一些题">一些题</span></h3>
+<h3><span id="一些混淆点">一些混淆点</span></h3>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">      <span class="keyword">String</span> s = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">String</span> t = <span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span>[] c = &#123;<span class="string">'h'</span>,<span class="string">'e'</span>,<span class="string">'l'</span>,<span class="string">'l'</span>,<span class="string">'o'</span>&#125;;</span><br><span class="line"></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(t));        <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(c));        <span class="comment">//false</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s == t);             <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s.equals(<span class="keyword">new</span> <span class="keyword">String</span>(<span class="string">"hello"</span>)));              <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">String</span> s1 = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">String</span> s2 = <span class="string">"ab"</span> + <span class="string">"c"</span>;</span><br><span class="line">System.err.<span class="built_in">println</span>(s1 == s2);           <span class="comment">//true</span></span><br><span class="line">System.err.<span class="built_in">println</span>(s1.equals(s2));      <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 
       
@@ -411,6 +412,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/03/缩放图片/" rel="prev" title="缩放图片">
+                缩放图片 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +492,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -498,7 +503,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -509,7 +514,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -558,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">equals方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">hashCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">equals和hashCode的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">一些题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">equals方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">hashCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">equals和hashCode的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">一些混淆点</span></a></li></ol></div>
             
 
           </div>
