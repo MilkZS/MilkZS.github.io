@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="service," />
+  <meta name="keywords" content="bitmap," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1 概念     疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。">
-<meta name="keywords" content="service">
+<meta name="description" content="简介     当我们创建一个bitmap的时候，可以再创建bitmap的同时设置bitmap的config。也就是设置图片的色彩。ARGB指的是一种 色彩模式，里面A代表Alpha，R表示red，G表示green，B表示blue。其实所有的可见色都是右红绿蓝组成的，所以红绿蓝又称为三原色，每个原色都存储着所表示颜色的信息值     图片的色彩一共可以设置四种：   ALPHA_8     8位AL">
+<meta name="keywords" content="bitmap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Service">
-<meta property="og:url" content="http://milkdz.cn/2018/01/23/Service/index.html">
+<meta property="og:title" content="BitMapConfig">
+<meta property="og:url" content="http://milkdz.cn/2018/06/10/BitMapConfig/index.html">
 <meta property="og:site_name" content="Welcome To My Blog">
-<meta property="og:description" content="1 概念     疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。">
+<meta property="og:description" content="简介     当我们创建一个bitmap的时候，可以再创建bitmap的同时设置bitmap的config。也就是设置图片的色彩。ARGB指的是一种 色彩模式，里面A代表Alpha，R表示red，G表示green，B表示blue。其实所有的可见色都是右红绿蓝组成的，所以红绿蓝又称为三原色，每个原色都存储着所表示颜色的信息值     图片的色彩一共可以设置四种：   ALPHA_8     8位AL">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-23T12:37:45.749Z">
+<meta property="og:updated_time" content="2018-06-10T02:06:05.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Service">
-<meta name="twitter:description" content="1 概念     疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。">
+<meta name="twitter:title" content="BitMapConfig">
+<meta name="twitter:description" content="简介     当我们创建一个bitmap的时候，可以再创建bitmap的同时设置bitmap的config。也就是设置图片的色彩。ARGB指的是一种 色彩模式，里面A代表Alpha，R表示red，G表示green，B表示blue。其实所有的可见色都是右红绿蓝组成的，所以红绿蓝又称为三原色，每个原色都存储着所表示颜色的信息值     图片的色彩一共可以设置四种：   ALPHA_8     8位AL">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://milkdz.cn/2018/01/23/Service/"/>
+  <link rel="canonical" href="http://milkdz.cn/2018/06/10/BitMapConfig/"/>
 
 
 
 
 
-  <title>Service | Welcome To My Blog</title>
+  <title>BitMapConfig | Welcome To My Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/01/23/Service/">
+    <link itemprop="mainEntityOfPage" href="http://milkdz.cn/2018/06/10/BitMapConfig/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MilkDZ">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Service</h1>
+          <h1 class="post-title" itemprop="name headline">BitMapConfig</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-23T20:32:52+08:00">
-                2018-01-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-10T10:04:05+08:00">
+                2018-06-10
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
+                  <a href="/categories/BitMap/" itemprop="url" rel="index">
+                    <span itemprop="name">BitMap</span>
                   </a>
                 </span>
 
@@ -352,58 +352,34 @@
       
 
       
-        <h3><span id="1-概念">1 概念</span></h3>
-<p>    疯狂Android中说明Service和ACtivity相似，两者区别就是ACtivity有界面而Service运行在后台没有界面。个人理解 service主要用来处理不需要和用户进行交互的事情，并且在APP退出后，activity会销毁，但是如果service还没有结束，那么会继续运行。</p>
-<a id="more"></a>
-<h3><span id="2-配置">2 配置</span></h3>
-<p>    开发Service组件也需要在AndroidManifest.xml中配置一下。</p>
-<pre><code>&lt;service android:name=&quot;.FirstService&quot;&gt;
-
-&lt;/service&gt;       //FirstService是使用者自己创建的继承自Service发挥作用的类。
-</code></pre>
-<h3><span id="3-内部方法">3 内部方法</span></h3>
-<pre><code>1. IBinder onBind（Intent intent）
-
-    //这是Service子类必须实现的方法。应用程序通过这个与Service组件通信。
-
-2. void onCreate（）
-
-   //该Service第一次被创建的时候调用它 二次就不会调用
-
-3. void onStartCommand（Intent intent,int flags,int startId）
-
-   // 每次客户端通过startService（Intent）启动该Service时候都会回调该函数。
-
-4. void onDestory()
-
-   // 销毁该Service
-
-5. boolean onUnbind(Intent intent)
-
-   // 当Service绑定的所有客户端都断开连接时候会回调该方法。
-</code></pre>
-<h3><span id="4-启动service">4 启动service</span></h3>
+        <h3><span id="简介">简介</span></h3>
+<p>    当我们创建一个bitmap的时候，可以再创建bitmap的同时设置bitmap的config。也就是设置图片的色彩。ARGB指的是一种 色彩模式，里面A代表Alpha，R表示red，G表示green，B表示blue。其实所有的可见色都是右红绿蓝组成的，所以红绿蓝又称为三原色，每个原色都存储着所表示颜色的信息值</p>
+<p>    图片的色彩一共可以设置四种：</p>
 <ul>
 <li>
-<h5><span id="通过context的startservice启动">通过context的startService（）启动。</span></h5>
-<p>    访问者与Service没有关联，访问者退出不影响Service的继续运行。使用这个方法，自动调用onCreate、onStartCommand，如果同一个service多次启动，则只会调用一次onCreate。</p>
+<p>ALPHA_8</p>
+<p>    8位ALPHA</p>
 </li>
 <li>
-<h5><span id="通过context的bindservice启动">通过context的bindService（）启动。</span></h5>
-<p>    访问者和Service有关联，访问者一旦退出，Service也就停止运行了。自动调用onCreate，onBind方法。</p>
+<p>ARGB_4444</p>
+<p>    16位RGB</p>
+</li>
+<li>
+<p>ARGB_8888</p>
+<p>    32位RGB</p>
+</li>
+<li>
+<p>RGB_565</p>
+<p>    8位RGB</p>
 </li>
 </ul>
-<h3><span id="5-停止service">5 停止service</span></h3>
-<ul>
-<li>
-<h5><span id="通过stopservice停止">通过stopService（）停止</span></h5>
-<p>    手动调用stopService()后，自动调用内部方法：onDestory()如果一个service被启动且被绑定，如果没有在绑定的前提下stopService()是无法停止服务的。</p>
-</li>
-<li>
-<h5><span id="通过unbindservice停止">通过unbindService（）停止</span></h5>
-<p>    手动调用unbindService()后，自动调用内部方法：onCreate()、onBind()、onDestory()。</p>
-</li>
-</ul>
+<h3><span id="区别">区别</span></h3>
+<p><strong>ALPHA_8</strong> : 只有透明度，没有存储颜色信息<br>
+<br><strong>ARGB_4444</strong> : 存储透明度和颜色信息，4位A，4位R，4位G，4位B<br>
+<br><strong>ARGB_8888</strong> : 存储透明度和颜色信息，8位A，8位R，8位G，8位B<br>
+<br><strong>RGB_565</strong> : 没有透明度，只有颜色。</p>
+<h3><span id="计算图片大小">计算图片大小</span></h3>
+<p>    对于一个480<em>800的图片，计算其大小位(480</em>800<em>字节数)/(1024</em>1024)。其中字节数=位数/2</p>
 
       
     </div>
@@ -421,7 +397,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/service/" rel="tag"># service</a>
+            <a href="/tags/bitmap/" rel="tag"># bitmap</a>
           
         </div>
       
@@ -434,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/18/Tcpdump的使用/" rel="next" title="Tcpdump的使用">
-                <i class="fa fa-chevron-left"></i> Tcpdump的使用
+              <a href="/2018/06/06/链表倒置/" rel="next" title="链表倒置">
+                <i class="fa fa-chevron-left"></i> 链表倒置
               </a>
             
           </div>
@@ -443,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/23/SuppressWarnings/" rel="prev" title="@SuppressWarnings">
-                @SuppressWarnings <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -594,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1 概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">2 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">3 内部方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">4 启动service</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.0.1.</span> <span class="nav-text">通过context的startService（）启动。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.0.2.</span> <span class="nav-text">通过context的bindService（）启动。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">5 停止service</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.1.</span> <span class="nav-text">通过stopService（）停止</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.0.2.</span> <span class="nav-text">通过unbindService（）停止</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">计算图片大小</span></a></li></ol></div>
             
 
           </div>

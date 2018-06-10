@@ -261,13 +261,6 @@
     </url>
 
     <url>
-        <loc>http://milkdz.cn/tags/bitmap/</loc>
-        <lastmod>2018-06-03T10:23:59.788Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://milkdz.cn/tags/%E7%BC%A9%E6%94%BE%E5%9B%BE%E7%89%87/</loc>
         <lastmod>2018-06-03T10:23:59.788Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -277,6 +270,13 @@
     <url>
         <loc>http://milkdz.cn/tags/%E9%93%BE%E8%A1%A8/</loc>
         <lastmod>2018-06-06T12:29:09.299Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://milkdz.cn/tags/bitmap/</loc>
+        <lastmod>2018-06-10T02:06:05.044Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
